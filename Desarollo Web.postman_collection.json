@@ -1,0 +1,740 @@
+{
+	"info": {
+		"_postman_id": "17250fa6-e6e0-4de1-a94c-af93da9f2334",
+		"name": "Desarollo Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23227133"
+	},
+	"item": [
+		{
+			"name": "Paciente",
+			"item": [
+				{
+					"name": "paciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/paciente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paciente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paciente/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"nombre\": \"Roberta\",\r\n    \"apellido\": \"Harrison\",\r\n    \"dni\": 92559102,\r\n    \"telefono\": 971967404,\r\n    \"email\": \"robertaharrison@kangle.com\",\r\n    \"fechaNacimiento\": \"1995-04-03\",\r\n    \"fechaRegistro\": \"2024-04-03\",\r\n    \"genero\": \"female\",\r\n    \"activo\": 1\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/paciente/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paciente",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paciente/update/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Elvis\",\r\n        \"apellido\": \"Sandoval\",\r\n        \"dni\": 69898828,\r\n        \"telefono\": 946317628,\r\n        \"email\": \"lunahendrix@kangle.com\",\r\n        \"fechaNacimiento\": \"1995-04-03\",\r\n        \"genero\": \"male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/paciente/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paciente",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paciente/disable/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/paciente/disable/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paciente",
+								"disable",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paciente/view/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/paciente/view/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paciente",
+								"view",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paciente/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/paciente/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paciente",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Especialidad",
+			"item": [
+				{
+					"name": "especialidad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/especialidad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "especialidad/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"nombre\": \"Roberta\",\r\n    \"fechaRegistro\": \"2024-04-03\",\r\n    \"activo\": 1\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/especialidad/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "especialidad/update/{id} Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Elvis\",\r\n        \"apellido\": \"Sandoval\",\r\n        \"dni\": 69898828,\r\n        \"telefono\": 946317628,\r\n        \"email\": \"lunahendrix@kangle.com\",\r\n        \"fechaNacimiento\": \"1995-04-03\",\r\n        \"genero\": \"male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/especialidad/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "especialidad/disable/{id} Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/especialidad/disable/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"disable",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "especialidad/view/{id} Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/especialidad/view/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"view",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "especialidad/delete/{id} Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/especialidad/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medicos",
+			"item": [
+				{
+					"name": "medico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medico/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"id_Especialidad\": 3,\r\n    \"nombre\": \"Kim\",\r\n    \"apellido\": \"Pachas\",\r\n    \"dni\": 92321102,\r\n    \"direccion\": \"Partida Elsa, 7 - Lowell, Com / 40696\",\r\n    \"telefono\": 971967404,\r\n    \"email\": \"kpachas@kangle.com\",\r\n    \"numeroColegiatura\": \"84512433\",/*los digitos 6 */\r\n    \"fechaNacimiento\": \"1995-04-03\",\r\n    \"fechaRegistro\": \"2024-04-03\",\r\n    \"activo\": 1\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medico/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medico",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medico/update/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Elvis\",\r\n        \"apellido\": \"Sandoval\",\r\n        \"dni\": 69898828,\r\n        \"telefono\": 946317628,\r\n        \"email\": \"lunahendrix@kangle.com\",\r\n        \"fechaNacimiento\": \"1995-04-03\",\r\n        \"genero\": \"male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medico/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medico",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medico/disable/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medico/disable/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medico",
+								"disable",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medico/view/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medico/view/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medico",
+								"view",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medico/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medico/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medico",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Rosella\",\r\n    \"password\": \"661368cbb2fef2f4172fe5fe\",\r\n    \"nombre\": \"Letha\",\r\n    \"apellido\": \"Lora\",\r\n    \"email\": \"loracarson@kangle.com\",\r\n    \"fechaRegistro\": \"2024-04-03\",\r\n    \"activo\": 1\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/update/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Esandoval\",\r\n    \"password\": \"Make·$*1235*-\",\r\n    \"nombre\": \"Elvis\",\r\n    \"apellido\": \"Sandoval\",\r\n    \"email\": \"courtneycarson@kangle.com\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/disable/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/disable/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"disable",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/view/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/view/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"view",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cita",
+			"item": [
+				{
+					"name": "cita/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Medico\": \"2\",\r\n    \"id_Paciente\": \"2\",\r\n    \"id_user\": \"2\",\r\n    \"fechaAtencion\": \"2023-04-03\",\r\n    \"fechaRegistro\": \"2023-04-03\",\r\n    \"observaciones\": \"todo ok\",\r\n    \"estado\": 1\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cita/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cita",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cita",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/citas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"citas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cita/update/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Elvis\",\r\n        \"apellido\": \"Sandoval\",\r\n        \"dni\": 69898828,\r\n        \"telefono\": 946317628,\r\n        \"email\": \"lunahendrix@kangle.com\",\r\n        \"fechaNacimiento\": \"1995-04-03\",\r\n        \"genero\": \"male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/especialidad/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cita/disable/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/especialidad/disable/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"disable",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cita/view/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/especialidad/view/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"view",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cita/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/especialidad/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"especialidad",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
