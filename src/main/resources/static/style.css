@@ -1,0 +1,115 @@
+body{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+    color: #cfcfcf;
+}
+
+header{
+    margin-bottom: 50px;
+}
+
+table {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    background-color: #cfcfcf;
+    color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover{
+    color: #000000;
+}
+
+
+ul li{
+    list-style: none;
+}
+
+button {
+    filter: drop-shadow(0 0 2px #000000);
+    background: linear-gradient(to right, rgb(54, 0, 71), rgb(54, 0, 71), rgb(47, 255, 0));
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+button:hover{
+    filter: drop-shadow(0 0 2px white);
+    transition: 300ms;
+    background: linear-gradient(to right, white, white);
+    color: skyblue;
+}
+
+button:not(:hover){
+    transition: 300ms;
+}
+
+.contenedor {
+    margin: 0 auto;
+    width: 70%;
+    padding: 15px;
+    background-color: #cfcfcf;
+    color: #1b1b1b;
+    border-radius: 5px;
+}
+
+.contenedor button,
+.contenedor input{
+    margin: 5px 0;
+}
+
+.exito {
+    background-color: green;
+    color: black;
+    border: 1px grey solid;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.error {
+    background-color: red;
+    color: yellow;
+    border: 1px grey solid;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.banner{
+    margin: 0 auto;
+    padding: 50px 0;
+    background: linear-gradient(to right, rgb(54, 0, 71), rgb(54, 0, 71), rgb(47, 255, 0));
+}
+
+.navegador ul li{
+    margin-right: 25px;
+    display: inline-flex;
+    background-color: #000000;
+    padding: 10px 25px;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 5px rgb(54, 0, 71));
+}
+
+.navegador ul li:hover{
+    filter: drop-shadow(0 0 5px skyblue);
+    background-color: #ffffff;
+    transition: 300ms;
+}
+
+.navegador ul li:not(:hover){
+    transition: 300ms;
+}
+
+footer{
+    margin-top: 100px;
+}

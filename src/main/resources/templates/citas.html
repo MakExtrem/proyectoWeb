@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/citas.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!--=============== FAVICON ===============-->
+    <link rel="icon" type="image/x-icon" href="assets/ico/LogoS.ico">
+    <!--=============== BOOSTRAP ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Citas</title>
+</head>
+<body>
+
+<header class="header" id="header">
+    <nav class="nav container">
+        <img src="assets/img/LogoS.png" alt="" style="width: 80px;">
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a th:href="@{/inicio}" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a th:href="@{/citas}" class="nav__link">Citas</a>
+                    </from>
+                </li>
+
+                <li class="nav__item">
+                    <a th:href="@{/pacientes}" class="nav__link">Pacientes</a>
+                </li>
+
+                <li class="nav__item">
+                    <a th:href="@{/medicos}" class="nav__link">Médicos</a>
+                </li>
+
+                <li class="nav__item">
+                    <a th:href="@{/especialistas}" class="nav__link">Especialistas</a>
+                </li>
+
+                <li class="nav__item">
+                    <a th:href="@{/}" class="nav__link">Logout</a>
+                </li>
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__actions">
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+     <div class="container-fluid">
+         <div class="row">
+             <div class="col">
+                 <div class="text-center">
+                     <h1 class="display-5 mb-5"><strong>Citas</strong></h1>
+                 </div>
+             </div>
+         </div>
+
+        <div class="row justify-content-center">
+            <form action="" class="row justify-content-center mb-4" autocomplete="">
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="">MÉDICO</label>
+                    <input class="form-control" type="text" placeholder="ID MÉDICO">
+                </div>
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="">PACIENTE</label>
+                    <input class="form-control" type="text" placeholder="ID PACIENTE">
+                </div>
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="">OBSERVACIONES</label>
+                    <input class="form-control" type="text" placeholder="OBSERVACIONES">
+                </div>
+                <div class="col-10 col-md-8">
+                    <input class="btn btn-success add-btn" type="submit" value="ENVIAR">
+                </div>
+            </form>
+        </div>
+     </div>
+     <div class="container">
+        <div class="col-12">
+            <table class="table table-striped table-white">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ID MÉDICO</th>
+                        <th>ID PACIENTE</th>
+                        <th>ID USUARIO</th>
+                        <th>FECHA ATENCION</th>
+                        <th>HORA ATENCION</th>
+                        <th>OBSERVACIONES</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody class="student-list" id="tableBody_Cita">
+
+                </tbody>
+            </table>
+        </div>
+     </div>
+
+     <footer>
+         <div class="footerS">
+             <p>Copyright © 2024 VidaPlena</p>
+         </div>
+     </footer>
+
+<script src="assets/js/cita.js"></script>
+</body>
+

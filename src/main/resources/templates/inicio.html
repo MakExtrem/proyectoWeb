@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <!--=============== FAVICON ===============-->
+    <link rel="icon" type="image/x-icon" href="assets/ico/LogoS.ico">
+    <title>VidaSalud</title>
+</head>
+<body>
+    
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+           <img src="assets/img/LogoS.png" alt="" style="width: 80px;">
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li class="nav__item">
+                    <a th:href="@{/inicio}" class="nav__link">Home</a>
+                 </li>
+                 <li class="nav__item">
+                         <a th:href="@{/citas}" class="nav__link">Citas</a>
+                     </from>
+                 </li>
+
+                 <li class="nav__item">
+                    <a th:href="@{/pacientes}" class="nav__link">Pacientes</a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a th:href="@{/medicos}" class="nav__link">Médicos</a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a th:href="@{/especialistas}" class="nav__link">Especialistas</a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a th:href="@{/}" class="nav__link">Logout</a>
+                 </li>
+              </ul>
+
+              <!-- Close button -->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-line"></i>
+
+              </div>
+           </div>
+
+           <div class="nav__actions">
+
+              <!-- Toggle button -->
+              <div class="nav__toggle" id="nav-toggle">
+                 <i class="ri-menu-line"></i>
+              </div>
+           </div>
+        </nav>
+     </header>
+
+    <div class="background-image">
+        <div class="background-content">
+            <h2>Tu Clinica de confianza</h2>
+            <p>Máxima precisión en tus análisis, sean de rutina o de alta complejidad, gracias a nuestros profesionales y nuestros equipos de última generación con reconocimiento a nivel mundial.</p>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="main-about">
+            <div class="inner-about">
+                <div class="about-content">
+                    <h2>Profesionales Altamente Capacitados</h2>
+                <p>Somos un grupo de profesionales altamente capacitados y experimentados. Contamos con más de 20 años de trayectoria profesional en el sector.</p>
+                </div>
+                
+            </div>
+            <div class="inner-about">
+                <div class="inner-about-image">
+                    <img src="assets/img/chiness.jpg" alt="">
+                </div>
+                <div class="inner-about-image">
+                    <img src="assets/img/pexels-anthony-shkraba-6749770.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="main-services">
+            <div class="inner-services-content">
+                <h2>Años de trayectoria</h2>
+                <p>Somos un grupo de profesionales altamente capacitados y experimentados. Contamos con más de 20 años de trayectoria profesional en el sector.</p>
+            </div>
+
+            <div class="inner-services-content">
+                <h2>Tecnología de punta </h2>
+                <p>Gracias a la calidad de nuestros equipos de última generación, puede confiar en la precisión de sus resultados. Nos interesa su tranquilidad y su salud.</p>
+                
+            </div>
+
+            <div class="inner-services-content">
+                <h2>Siempre a la vanguardia</h2>
+                <p>Estamos constantemente innovando para brindar el mejor servicio. Es fundamental en nuestra organización el confort y la eficiencia en la atención de pacientes y clientes.</p>             
+            </div>
+        </div>
+    </div>
+
+
+    <div class="gallery">
+        <h2>Galería</h2>
+        <div class="main-gallery">
+            <div class="inner-gallery">
+                <img src="assets/img/gal1.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="assets/img/gal2.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="assets/img/gal3.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="assets/img/gal4.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="assets/img/gal5.jpg" alt="">
+            </div>
+
+            <div class="inner-gallery">
+                <img src="assets/img/gal6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <from th:action="@{/citas}" method="post">
+        <input type="submit" class="submit"  name="btm-login" value="Sign Up">
+    </from>
+    <footer>
+        <div class="footerS">
+            <p>Copyright © 2024 VidaPlena</p>
+        </div>
+
+    </footer>
+       <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+</body>
+</html>
