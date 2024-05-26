@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <div th:replace="Complementos/head :: head"></div>
+    <title>Especialidades</title>
+</head>
+<body>
+    <header>
+        <div th:replace="Complementos/header :: header"></div>
+    </header>
+      <div class="contenedor_especialidades">
+
+          <a th:href="@{/medicinaGeneral}"><img src="assets/img/medicinaG.png" alt=""><p>Medicina General</p></a>
+          <a th:href="@{/ginecologia}"><img src="assets/img/ginecologia.png" alt=""><p>Ginecología</p></a>
+          <a th:href="@{/odontologia}"><img  src="assets/img/odontologia.png" alt=""><p>Odontología</p></a>
+          <a th:href="@{/nutricionista}"><img src="assets/img/nutricionista.png" alt=""><p>Nutricionista</p></a>
+          <a th:href="@{/psicologia}"><img src="assets/img/psicologo.png" alt=""><p>Psicología</p></a>
+          <a th:href="@{/cardiologia}"><img src="assets/img/cardiologia.png" alt=""><p>Cardiología</p></a>
+
+      </div>
+    <footer>
+        <div th:replace="Complementos/footer :: footer"></div>
+    </footer>
+</body>
+

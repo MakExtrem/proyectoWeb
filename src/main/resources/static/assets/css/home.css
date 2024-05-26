@@ -119,3 +119,228 @@
     position: relative;
     top: 25px;
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav__menu a:hover{
+    text-decoration: none;
+}
+
+.table{
+    position: relative;
+    left: 150px;
+}
+
+.contenedor_especialidades{
+    width: 1000px;
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0;
+}
+
+.contenedor_especialidades a{
+    padding: 20px 20px;
+    margin: auto;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+
+.contenedor_especialidades img{
+    width: 75px;
+    height: 75px;
+    margin: auto;
+}
+
+.contenedor_especialidades p{
+    text-align: center;
+    width: 155px;
+    margin-top: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+/* FOOTER */
+.footerS{
+    width: 100%;
+    height: 10vh;
+    background-color: hsl(232, 64%, 86%);
+    position: relative;
+    top: 18px;
+}
+.footerS p{
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    top: 25px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.nav__menu a:hover{
+    text-decoration: none;
+}
+
+.table{
+    position: relative;
+    left: 150px;
+}
+
+.contenedor_medicina{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    margin-top: 89px;
+    display: flex;
+}
+
+.contenedor_information{
+    background-color: #00b1a9;
+    width: 40%;
+}
+
+.contenedor_information h1{
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+    padding-top: 185px;
+}
+
+.contenedor_information p{
+    text-align: center;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 25pxs;
+    padding: 0 80px;
+}
+
+.contenedor_detalles{
+    display: flex;
+    width: 60%;
+    background-color: #eaeef1;
+}
+
+.contenedor_detalles_img{
+    width: 40%;
+}
+
+.contenedor_detalles_img img{
+    width: 78%;
+    padding-top: 80px;
+    margin: auto;
+}
+
+.contenedor_detalles_inf{
+    width: 60%;
+    padding-top: 150px;
+}
+
+.contenedor_detalles_inf h2{
+    text-align: center;
+    color: #00b1a9;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.contenedor_detalles_inf p{
+    padding-left: 36px;
+    font-size: 20px;
+    color: #00b1a9;
+
+}
+
+.contenedor_telefono{
+    display: flex;
+    padding-left: 36px;
+}
+
+.contenedor_detalles_telefono img{
+    width: 21px;
+    padding-top: 6px;
+}
+
+.contenedor_detalles_datos p{
+    position: relative;
+    right: 23px;
+}
+
+
+/* FOOTER */
+.footerS{
+    width: 100%;
+    height: 10vh;
+    background-color: hsl(232, 64%, 86%);
+    position: relative;
+    top: 60px;
+}
+.footerS p{
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    top: 25px;
+}
+
+
+.contenedor_profesional{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.contenedor_profesional_h2{
+    font-size: 25px;
+    color: #00b1a9;
+}
+
+.contenedor_especialidad{
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 10px;
+}
+
+.especialidad_information{
+    display: flex;
+    margin: 20px;
+}
+
+.information_h2 h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.information_img{
+    margin: 0 20px;
+}
+
+.da h2{
+    position: relative;
+    right: -250px;
+    bottom: 2px;
+}
+
+.de h2{
+    position: relative;
+    right: -175px;
+    bottom: 2px;
+}
+
+.di h2{
+    position: relative;
+    right: -140px;
+    bottom: 2px;
+}

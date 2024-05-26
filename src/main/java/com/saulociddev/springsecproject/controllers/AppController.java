@@ -44,6 +44,40 @@ public class AppController {
     public String especialistas(){
         return "especialistas";
     }
+    @GetMapping("/especialidades")
+    public String especialidades(){
+        return "especialidades";
+    }
+    @GetMapping("/cardiologia")
+    public String cardiologia(){
+        return "EspecUser/cardiologia";
+    }
+    @GetMapping("/medicinaGeneral")
+    public String medicinaGeneral(){
+        return "EspecUser/medicinaGeneral";
+    }
+    @GetMapping("/ginecologia")
+    public String ginecologia(){
+        return "EspecUser/ginecologia";
+    }
+    @GetMapping("/odontologia")
+    public String odontologia(){
+        return "EspecUser/odontologia";
+    }
+    @GetMapping("/nutricionista")
+    public String nutricionista(){
+        return "EspecUser/nutricionista";
+    }
+    @GetMapping("/psicologia")
+    public String psicologia(){
+        return "EspecUser/psicologia";
+    }
+
+    @GetMapping("/agenda")
+    public String agenda(){
+        return "agendaCita";
+    }
+
     @GetMapping("/registraruser")
     public String registrar(){
         return "registraruser";
@@ -101,7 +135,7 @@ public class AppController {
     }
 
     @PreAuthorize("hasAnyRole('ADMIN','MODERATOR')")
-    @GetMapping("/inicioAdmin   ")
+    @GetMapping("/inicioAdmin")
     public String admin(){
         return "inicioAdmin";
     }

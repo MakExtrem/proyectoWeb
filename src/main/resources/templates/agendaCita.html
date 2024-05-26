@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <div th:replace="Complementos/head :: head"></div>
+    <title>Agenda tu Cita</title>
+</head>
+<body>
+    <header>
+        <div th:replace="Complementos/header :: header"></div>
+    </header>
+
+    <div class="container justify-content-center">
+
+    <div class="main row justify-content-center">
+        <form action="" class="row justify-content-center" autocomplete="">
+
+            <div class="col">
+                <label for="">ESPECIALIDAD</label>
+                <select name="" id="">
+                    <option value="">Medicina General</option>
+                    <option value="">Ginecología</option>
+                    <option value="">Odontología</option>
+                    <option value="">Nutricionista</option>
+                    <option value="">Psicología</option>
+                    <option value="">Cardiología</option>
+                </select>
+            </div>
+            <h3 class="information_">*Los horarios de las citas son de acuerdo a la llegada del paciente, tomar en cuenta llegar temprano.</h3>
+            <div class="col">
+                <input class="btn btn-success add-btn cen" type="submit" value="AGENDAR CITA">
+            </div>
+        </form>
+        </div>
+
+    </div>
+    <footer>
+        <div th:replace="Complementos/footer :: footer"></div>
+    </footer>
+</body>
+

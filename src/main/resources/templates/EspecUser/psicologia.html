@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <div th:replace="Complementos/head :: head"></div>
+    <title>Psicologia</title>
+</head>
+<body>
+<header>
+    <div th:replace="Complementos/header :: header"></div>
+</header>
+        <div class="contenedor_medicina">
+            <div class="contenedor_information">
+                <h1>Psicología</h1>
+                <p>Atención en pacientes para mantener la salud mental, evaluando y tratando problemas emocionales, conductuales y cognitivos.</p>
+            </div>
+            <div class="contenedor_detalles">
+                <div class="contenedor_detalles_img">
+                    <img src="assets/img/docPsicologia.jpg" alt="">
+                </div>
+                <div class="contenedor_detalles_inf">
+                  <h2>Sánchez Torres Luis Fernando</h2>
+                    <p>Colegiatura: 10137</p>
+                  <div class="contenedor_telefono">
+                     <div class="contenedor_detalles_telefono">
+                           <img src="assets/img/telefono.png" alt="">
+                     </div>
+                     <div class="contenedor_detalles_datos">
+                        <p>(511) 244 2224 - (511) 224 2227</p>
+                     </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_profesional">
+         <h2 class="contenedor_profesional_h2">
+            Educación Profesional
+         </h2>
+         <div class="contenedor_especialidad">
+            <div class="especialidad_information">
+               <div class="information_img">
+                  <img src="assets/img/icon-1.png" alt="">
+               </div>
+               <div class="information_h2">
+                  <h2>Especialidad: Medicina General</h2>
+               </div>
+            </div>
+            <div class="especialidad_information">
+               <div class="information_h2 da">
+                  <h2 >1ra Especialización: Medicina General</h2>
+               </div>
+            </div>
+         </div>
+
+            <div class="contenedor_especialidad">
+            <div class="especialidad_information">
+               <div class="information_img">
+                  <img src="assets/img/icon-1.png" alt="">
+               </div>
+               <div class="information_h2">
+                  <h2>Universidad Nacional Federico Villarreal</h2>
+               </div>
+            </div>
+            <div class="especialidad_information">
+               <div class="information_h2 de">
+                  <h2>Profesión: Médico General</h2>
+               </div>
+            </div>
+            </div>
+
+            <div class="contenedor_especialidad">
+            <div class="especialidad_information">
+               <div class="information_img">
+                  <img src="assets/img/icon-1.png" alt="">
+               </div>
+               <div class="information_h2">
+                  <h2>Universidad Nacional Mayor De San Marcos</h2>
+               </div>
+            </div>
+            <div class="especialidad_information">
+               <div class="information_h2 di">
+                  <h2>2da Especialización: Medicina Interna</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+    <footer>
+        <div th:replace="Complementos/footer :: footer"></div>
+    </footer>
+</body>
