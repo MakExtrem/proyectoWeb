@@ -15,6 +15,7 @@ public class especialidadController {
     @GetMapping(value = "/especialidad")
     public List<especialidad> getEspecialidad(){
         return EspecialidadRepository.findAll();
+
     }
 
     @PostMapping(value = "/especialidad/save")

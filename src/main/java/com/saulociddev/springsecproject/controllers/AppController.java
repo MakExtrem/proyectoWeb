@@ -69,7 +69,7 @@ public class AppController {
             return "inicio";
         } catch (Exception e) {
             // Toma la excepción de UserDetail del logeo "UsernameNotFoundException("Error al encontrar usuario")"
-            return "/";
+            return "index";
         }
     }
 
@@ -81,7 +81,7 @@ public class AppController {
         modelo.addAttribute("logeado", logeado);
         listarItems(modelo);
         if (logeado.getRol().toString().equals("ADMIN") || logeado.getRol().toString().equals("MODERATOR")) {
-            return "admin";
+            return "inicioAdmin";
         }
         return "inicio";
     }
@@ -101,9 +101,9 @@ public class AppController {
     }
 
     @PreAuthorize("hasAnyRole('ADMIN','MODERATOR')")
-    @GetMapping("/admin")
+    @GetMapping("/inicioAdmin   ")
     public String admin(){
-        return "admin";
+        return "inicioAdmin";
     }
 
     public void listarItems(ModelMap modelo){
