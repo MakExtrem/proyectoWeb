@@ -9,59 +9,69 @@
         <div th:replace="Complementos/header :: header"></div>
     </header>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="text-center">
-                    <h1 class="display-5 mb-5"><strong>Citas</strong></h1>
+                    <h1 class="display-5 mb-5"><strong>Agendar Cita</strong></h1>
                 </div>
             </div>
         </div>
+        <hr>
+        <form action="" class="row justify-content-center mb-4" id="formulario">
 
-        <div class="row justify-content-center">
-            <form action="" class="row justify-content-center mb-4" id="formulario">
-
-                <div class="col-6 col-md-8 mb-3">
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-3">
                     <label for="">Especialidad :</label>
                 </div>
-                <div class="col-6 col-md-8 mb-3">
-                    <select name="" class="" id="option_especialidades">
+                <div class="col col-lg-3">
+                    <select name="" class="" id="option_especialidades" >
                     </select>
                 </div>
+            </div>
 
-                <div class="col-6 col-md-8 mb-3">
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-3">
                     <label for="">Medico :</label>
                 </div>
-                <div class="col-6 col-md-8 mb-3">
-                    <select name="id_Medico" class="" id="option_medico">
+                <div class="col col-lg-3">
+                    <select name="id_Medico" class="" id="option_medico" >
 
                     </select>
                 </div>
-                <!--<input  type="hidden" name="id_Paciente" value="1">-->
-
-                <div class="col-6 col-md-8 mb-3">
+            </div>
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-6">
                     <label for="">Fecha :</label>
-                    <input class="form-control" type="date" placeholder="ID PACIENTE" id="fechaAtencion" name="fechaAtencion">
+                    <input class="form-control" type="date"  id="fechaAtencion" name="fechaAtencion" >
                 </div>
-
-                <div class="col-6 col-md-8 mb-3">
+            </div>
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-6">
                     <label for="">Hora :</label>
-                    <input class="form-control" type="time" placeholder="ID PACIENTE" id="horaAtencion" name="horaAtencion">
+                    <input class="form-control" type="time"  id="horaAtencion" name="horaAtencion" >
                 </div>
+            </div>
+            <div class="row justify-content-md-center my-3">
 
-
-                <div class="col-6 col-md-8 mb-3">
+                <div class="col col-lg-6">
                     <label for="">Observacion</label>
-                    <input class="form-control" type="textarea" placeholder="¿Deseas dejar una nota?" id="observaciones" name="observaciones">
+                    <input class="form-control" type="textarea" placeholder="¿Deseas dejar una nota?" id="observaciones" name="observaciones"   >
                 </div>
-                <div class="col-6 col-md-6 mb-3">
+            </div>
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-6 d-flex justify-content-center">
                     <input class="btn btn-success add-btn" type="submit" value="AGENDAR CITA" id="enviar">
                 </div>
-                <p id="respuesta"></p>
-            </form>
+            </div>
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-6">
+                    <p id="respuesta"></p>
+                </div>
+            </div>
 
+        </form>
 
-        </div>
     </div>
 
 
