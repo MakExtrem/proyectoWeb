@@ -9,32 +9,66 @@
         <div th:replace="Complementos/header :: header"></div>
     </header>
 
-    <div class="container justify-content-center">
-
-    <div class="main row justify-content-center">
-        <form action="" class="row justify-content-center" autocomplete="">
-
+    <div class="container-fluid">
+        <div class="row">
             <div class="col">
-                <label for="">ESPECIALIDAD</label>
-                <select name="" id="">
-                    <option value="">Medicina General</option>
-                    <option value="">Ginecología</option>
-                    <option value="">Odontología</option>
-                    <option value="">Nutricionista</option>
-                    <option value="">Psicología</option>
-                    <option value="">Cardiología</option>
-                </select>
+                <div class="text-center">
+                    <h1 class="display-5 mb-5"><strong>Citas</strong></h1>
+                </div>
             </div>
-            <h3 class="information_">*Los horarios de las citas son de acuerdo a la llegada del paciente, tomar en cuenta llegar temprano.</h3>
-            <div class="col">
-                <input class="btn btn-success add-btn cen" type="submit" value="AGENDAR CITA">
-            </div>
-        </form>
         </div>
 
+        <div class="row justify-content-center">
+            <form action="" class="row justify-content-center mb-4" id="formulario">
+
+                <div class="col-6 col-md-8 mb-3">
+                    <label for="">Especialidad :</label>
+                </div>
+                <div class="col-6 col-md-8 mb-3">
+                    <select name="" class="" id="option_especialidades">
+                    </select>
+                </div>
+
+                <div class="col-6 col-md-8 mb-3">
+                    <label for="">Medico :</label>
+                </div>
+                <div class="col-6 col-md-8 mb-3">
+                    <select name="id_Medico" class="" id="option_medico">
+
+                    </select>
+                </div>
+                <!--<input  type="hidden" name="id_Paciente" value="1">-->
+
+                <div class="col-6 col-md-8 mb-3">
+                    <label for="">Fecha :</label>
+                    <input class="form-control" type="date" placeholder="ID PACIENTE" id="fechaAtencion" name="fechaAtencion">
+                </div>
+
+                <div class="col-6 col-md-8 mb-3">
+                    <label for="">Hora :</label>
+                    <input class="form-control" type="time" placeholder="ID PACIENTE" id="horaAtencion" name="horaAtencion">
+                </div>
+
+
+                <div class="col-6 col-md-8 mb-3">
+                    <label for="">Observacion</label>
+                    <input class="form-control" type="textarea" placeholder="¿Deseas dejar una nota?" id="observaciones" name="observaciones">
+                </div>
+                <div class="col-6 col-md-6 mb-3">
+                    <input class="btn btn-success add-btn" type="submit" value="AGENDAR CITA" id="enviar">
+                </div>
+                <p id="respuesta"></p>
+            </form>
+
+
+        </div>
     </div>
+
+
     <footer>
         <div th:replace="Complementos/footer :: footer"></div>
     </footer>
+    <script src="assets/js/agendarenviar.js"></script>
+    <script src="assets/js/agendarlistar.js"></script>
 </body>
 

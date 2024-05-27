@@ -9,39 +9,17 @@
     <header>
         <div th:replace="Complementos/headerAdmin :: header"></div>
     </header>
-
-     <div class="container-fluid">
-         <div class="row">
-             <div class="col">
-                 <div class="text-center">
-                     <h1 class="display-5 mb-5"><strong>Citas</strong></h1>
-                 </div>
-             </div>
-         </div>
-
-        <div class="row justify-content-center">
-            <form action="" class="row justify-content-center mb-4" autocomplete="">
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="">MÉDICO</label>
-                    <input class="form-control" type="text" placeholder="ID MÉDICO">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="text-center">
+                    <h1 class="display-5 mb-5"><strong>Citas</strong></h1>
                 </div>
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="">PACIENTE</label>
-                    <input class="form-control" type="text" placeholder="ID PACIENTE">
-                </div>
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="">OBSERVACIONES</label>
-                    <input class="form-control" type="text" placeholder="OBSERVACIONES">
-                </div>
-                <div class="col-10 col-md-8">
-                    <input class="btn btn-success add-btn" type="submit" value="ENVIAR">
-                </div>
-            </form>
+            </div>
         </div>
-     </div>
-
+    </div>
      <div class="container">
-        <div class="col-12">
+        <div class="col">
             <table class="table table-striped table-white">
                 <thead>
                     <tr>
@@ -62,10 +40,12 @@
         </div>
      </div>
 
+
     <footer>
         <div th:replace="Complementos/footer :: footer"></div>
     </footer>
 
 <script src="assets/js/cita.js"></script>
+
 </body>
 

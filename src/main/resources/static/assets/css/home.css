@@ -129,10 +129,6 @@
     text-decoration: none;
 }
 
-.table{
-    position: relative;
-    left: 150px;
-}
 
 .contenedor_especialidades{
     width: 1000px;
@@ -194,10 +190,7 @@
     text-decoration: none;
 }
 
-.table{
-    position: relative;
-    left: 150px;
-}
+
 
 .contenedor_medicina{
     width: 100%;

@@ -1,14 +1,17 @@
 package com.saulociddev.springsecproject.controllers;
 
+import com.saulociddev.springsecproject.entities.Usuario;
 import com.saulociddev.springsecproject.entities.cita;
 import com.saulociddev.springsecproject.repositories.citaRepository;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-public class citaController {
+public class citaController  {
     @Autowired
     private citaRepository CitaRepository;
 
@@ -19,10 +22,17 @@ public class citaController {
     }
 
     @PostMapping(value = "/cita/save")
-    private String saveCita(@RequestBody cita Cita){
+    private String saveCita(@RequestBody cita Cita ,HttpSession sesion, ModelMap modelo){
         //Prueba
-        Cita.setHoraAtencion(Cita.setHoraAtencionini());
-        //prueba
+        //Cita.setHoraAtencion(Cita.setHoraAtencionini());
+        Cita.setFechaRegistro(Cita.setFechaSistema());
+        Usuario logeado = (Usuario) sesion.getAttribute("logeado");
+        modelo.addAttribute("logeado", logeado);
+        int id = Integer.parseInt(logeado.getId());
+        Cita.setId_Paciente(id);
+        Cita.setId_user(id);
+        Cita.setEstado(1);
+
         CitaRepository.save(Cita);
         return "Se guardo la cita";
     }

@@ -1,6 +1,8 @@
 package com.saulociddev.springsecproject.controllers;
 
 import java.util.List;
+import com.saulociddev.springsecproject.entities.cita;
+import com.saulociddev.springsecproject.repositories.citaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -22,7 +24,8 @@ public class AppController {
 
     @Autowired
     private UsuarioService userServ;
-    
+
+
     @GetMapping("/")
     public String index(){
         return "index";

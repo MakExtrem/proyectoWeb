@@ -41,6 +41,13 @@ public class cita {
         /*horaAtencion=dateFormat.format(date);*/
 
     }
+    public String setFechaSistema(){
+        DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        Date date = new Date();
+        return dateFormat.format(date);
+        /*horaAtencion=dateFormat.format(date);*/
+
+    }
     public int getId() {
         return id;
     }
