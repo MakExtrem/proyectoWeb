@@ -3,6 +3,7 @@ package com.saulociddev.springsecproject.controllers;
 import com.saulociddev.springsecproject.entities.Usuario;
 import com.saulociddev.springsecproject.entities.cita;
 import com.saulociddev.springsecproject.repositories.citaRepository;
+import com.saulociddev.springsecproject.services.CitaService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -15,10 +16,24 @@ public class citaController  {
     @Autowired
     private citaRepository CitaRepository;
 
+    @Autowired
+    private CitaService citaService;
+
     @GetMapping(value = "/cita")
     private List<cita> getCita(){
 
         return CitaRepository.findAll();
+    }
+
+
+    @GetMapping("/cita/recdoc/{idEs}")
+    public List<Object[]> getRecommendedDoctors(@PathVariable int idEs,HttpSession sesion,ModelMap modelo) {
+        Usuario logeado = (Usuario) sesion.getAttribute("logeado");
+        modelo.addAttribute("logeado", logeado);
+        int id = Integer.parseInt(logeado.getId());
+        String id_paciente = String.valueOf(id);
+        String id_especialidad = String.valueOf(idEs);
+        return citaService.getRecommendedDoctors(id_paciente,id_especialidad);
     }
 
     @PostMapping(value = "/cita/save")
@@ -26,10 +41,12 @@ public class citaController  {
         //Prueba
         //Cita.setHoraAtencion(Cita.setHoraAtencionini());
         Cita.setFechaRegistro(Cita.setFechaSistema());
+
         Usuario logeado = (Usuario) sesion.getAttribute("logeado");
         modelo.addAttribute("logeado", logeado);
         int id = Integer.parseInt(logeado.getId());
         Cita.setId_Paciente(id);
+
         Cita.setId_user(id);
         Cita.setEstado(1);
 

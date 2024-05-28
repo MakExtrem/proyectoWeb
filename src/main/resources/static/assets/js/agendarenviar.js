@@ -34,7 +34,8 @@ const postData = async () => {
     /*coloca la informacion en el formato JSON */
     body: JSON.stringify(cita)
     });
-
+        respuesta.innerHTML =
+        `Se registro la cita con exito`
     /*if(response.ok){
         const jsonResponse = await response.json();
 
@@ -42,10 +43,10 @@ const postData = async () => {
 
          const {email, nombre, telefono} = jsonResponse;
 
-        respuesta.innerHTML =
-        `Se registro la cita con exito`
+
 
     }
+
 */
    }catch(error){
    	respuesta.innerHTML =
