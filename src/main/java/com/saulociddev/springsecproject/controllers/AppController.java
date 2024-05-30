@@ -35,6 +35,15 @@ public class AppController {
         return "citas";
     }
 
+    @GetMapping("/plansalud")
+    public String planSalud(){
+        return "planSalud";
+    }
+    @GetMapping("/ubicanos")
+    public String ubicanos(){
+        return "ubicanos";
+    }
+
     @GetMapping("/pacientes")
     public String pacientes(){
         return "pacientes";
@@ -80,6 +89,7 @@ public class AppController {
     public String agenda(){
         return "agendaCita";
     }
+
 
     @GetMapping("/registraruser")
     public String registrar(){
