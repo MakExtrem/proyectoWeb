@@ -213,3 +213,28 @@ img {
     margin-inline: auto;
   }
 }
+
+.Noticias{
+  width: 80%;
+  background-color: #F5F6F4 ;
+  margin: auto;
+}
+
+.Noticias_p{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.Noticias img{
+  width: 80%;
+  padding-left: 125px;
+}
+
+.Noticias_pp{
+  text-align: justify;
+  padding: 20px 40px;
+  font-size: 20px;
+  line-height: 60px;
+}

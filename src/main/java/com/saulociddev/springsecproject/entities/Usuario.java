@@ -14,12 +14,13 @@ import lombok.Data;
 public class Usuario {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String username;
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)
     private Rol rol;
+
 
 }

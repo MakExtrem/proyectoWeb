@@ -11,23 +11,32 @@ import java.util.Date;
 @Entity
 @Table(schema = "Cita")
 public class cita {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @Column
     private int id_Medico;
+
     @Column
     private int id_Paciente;
+
     @Column
     private int id_user;
+
     @Column
     private String fechaAtencion;
+
     @Column
     private String horaAtencion;
+
     @Column
     private String fechaRegistro;
+
     @Column
     private String observaciones;
+
     @Column
     private int estado;
 
@@ -41,6 +50,7 @@ public class cita {
         /*horaAtencion=dateFormat.format(date);*/
 
     }
+
     public String setFechaSistema(){
         DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
         Date date = new Date();
@@ -48,6 +58,7 @@ public class cita {
         /*horaAtencion=dateFormat.format(date);*/
 
     }
+
     public int getId() {
         return id;
     }
