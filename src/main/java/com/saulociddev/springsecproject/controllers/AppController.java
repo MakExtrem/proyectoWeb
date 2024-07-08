@@ -52,6 +52,12 @@ public class AppController {
     public String medicos(){
         return "medicos";
     }
+
+    @GetMapping("/citasmodificar")
+    public String citasmodificar(){
+        return "citasmodificar";
+    }
+
     @GetMapping("/especialistas")
     public String especialistas(){
         return "especialistas";

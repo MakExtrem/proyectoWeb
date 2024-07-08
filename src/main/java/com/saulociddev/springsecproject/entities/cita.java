@@ -18,9 +18,15 @@ public class cita {
 
     @Column
     private int id_Medico;
+    @Column
+    private String nombreMedico;
+    @Column
+    private String especialidadMedico;
 
     @Column
     private int id_Paciente;
+    @Column
+    private String nombrePaciente;
 
     @Column
     private int id_user;
@@ -129,5 +135,29 @@ public class cita {
 
     public void setEstado(int estado) {
         this.estado = estado;
+    }
+
+    public String getNombrePaciente() {
+        return nombrePaciente;
+    }
+
+    public void setNombrePaciente(String nombrePaciente) {
+        this.nombrePaciente = nombrePaciente;
+    }
+
+    public String getNombreMedico() {
+        return nombreMedico;
+    }
+
+    public void setNombreMedico(String nombreMedico) {
+        this.nombreMedico = nombreMedico;
+    }
+
+    public String getEspecialidadMedico() {
+        return especialidadMedico;
+    }
+
+    public void setEspecialidadMedico(String especialidadMedico) {
+        this.especialidadMedico = especialidadMedico;
     }
 }

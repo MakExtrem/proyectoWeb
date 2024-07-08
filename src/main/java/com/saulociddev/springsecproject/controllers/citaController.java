@@ -3,13 +3,16 @@ package com.saulociddev.springsecproject.controllers;
 import com.saulociddev.springsecproject.entities.Usuario;
 import com.saulociddev.springsecproject.entities.cita;
 import com.saulociddev.springsecproject.repositories.citaRepository;
+import com.saulociddev.springsecproject.repositories.medicoRepository;
 import com.saulociddev.springsecproject.services.CitaService;
+import com.saulociddev.springsecproject.services.medicoService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class citaController  {
@@ -17,12 +20,21 @@ public class citaController  {
     private citaRepository CitaRepository;
 
     @Autowired
+    private medicoRepository MedicoRepository;
+    @Autowired
+    private medicoService MedicoService;
+    @Autowired
     private CitaService citaService;
+
 
     @GetMapping(value = "/cita")
     private List<cita> getCita(){
 
         return CitaRepository.findAll();
+    }
+    @GetMapping(value = "/cita/{id}")
+    private Optional<cita> getOneCita(@PathVariable int id){
+        return CitaRepository.findById(id);
     }
 
 
@@ -41,12 +53,16 @@ public class citaController  {
         //Prueba
         //Cita.setHoraAtencion(Cita.setHoraAtencionini());
         Cita.setFechaRegistro(Cita.setFechaSistema());
-
         Usuario logeado = (Usuario) sesion.getAttribute("logeado");
         modelo.addAttribute("logeado", logeado);
-        int id = Integer.parseInt(logeado.getId());
+        int id = Integer.parseInt(logeado.getId());//aqui cambiar el id para que reciba un string o algo
+        Cita.setNombrePaciente(logeado.getUsername());
+        int id_medico=Cita.getId_Medico();
+        String nombre = MedicoService.getNombreById(id_medico);
+        String apellido= MedicoService.getApellidoById(id_medico);
+        String nombreCompleto = nombre.concat(" ").concat(apellido);
+        Cita.setNombreMedico(nombreCompleto);
         Cita.setId_Paciente(id);
-
         Cita.setId_user(id);
         Cita.setEstado(1);
 
@@ -56,11 +72,11 @@ public class citaController  {
     @PutMapping(value = "/cita/update/{id}")
     private String updateCita(@RequestBody cita Cita ,@PathVariable int id){
         cita updateCita = CitaRepository.findById(id).get();
-        updateCita.setId_Medico(Cita.getId_Medico());
-        updateCita.setId_Paciente(Cita.getId_Paciente());
+        /*updateCita.setId_Medico(Cita.getId_Medico());*/
+        updateCita.setNombreMedico(Cita.getNombreMedico());
+        updateCita.setEspecialidadMedico(Cita.getEspecialidadMedico());
         updateCita.setFechaAtencion(Cita.getFechaAtencion());
         updateCita.setHoraAtencion(Cita.getHoraAtencion());
-        updateCita.setObservaciones(Cita.getObservaciones());
         CitaRepository.save(updateCita);
         return "Se actualizo la cita";
     }

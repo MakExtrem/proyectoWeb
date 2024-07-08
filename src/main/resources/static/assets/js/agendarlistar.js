@@ -10,7 +10,7 @@ const ListaNombreEspecialidad = async () => {
         let option = `<option value="" id="especialidad">Elige la Especialidad</option>`;
         especialidad.forEach((especialidad) => {
             console.log(especialidad);
-            option += `<option value="${especialidad.id}" id="especialidad" name="">${especialidad.nombre}</option>`;
+            option += `<option value="${especialidad.nombre}" id="${especialidad.id}">${especialidad.nombre}</option>`;
         });
         option_especialidades.innerHTML = option;
     } catch (error) {
@@ -60,11 +60,14 @@ const ListaNombreMedico = async (especialidadId) => {
     }
 };
 
-window.addEventListener("load", function () {
+    window.addEventListener("load", function () {
     ListaNombreEspecialidad();
 
     option_especialidades.addEventListener("change", function () {
-        const espec = this.value;
+        const selectedOption = this.options[this.selectedIndex];
+                const espec = selectedOption.id; // Obtener el id de la opción seleccionada
+
+        /*const espec = this.value;*/
         if (espec) {
             ListaNombreMedico(espec);
         } else {

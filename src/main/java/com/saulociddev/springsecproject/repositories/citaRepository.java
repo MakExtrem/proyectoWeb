@@ -17,4 +17,6 @@ public interface citaRepository extends JpaRepository<cita,Integer> {
     List<Object[]> recomdoctor(@Param("idPaciente") String idPaciente,@Param("idEspecialidad") String idEspecialidad);
 
 
+
+
 }
