@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <div th:replace="Complementos/head :: head"></div>
+    <title>Modificar Cita</title>
+</head>
+<body>
+
+    <header>
+        <div th:replace="Complementos/headerAdmin :: header"></div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="text-center">
+                    <h1 class="display-5 mb-5"><strong>Modificar</strong></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="container">
+        <div class="col">
+            <form action="" class="row justify-content-center mb-4" id="formulario">
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Nombre Paciente:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="nombrePaciente">
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Nombre Medico:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="nombreMedico">
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Especialidad:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="especialidad">
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Fecha:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="fechaAtencion" >
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Hora:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="horaAtencion">
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+
+                <div class="col col-lg-5" id="observaciones">
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-5 d-flex justify-content-center">
+                    <input class="btn btn-success add-btn" type="submit" value="Guardar" id="guardar">
+                </div>
+            </div>
+                <div class="row justify-content-md-center my-3">
+                    <div class="col col-lg-5">
+                        <p id="respuesta"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+     </div>
+
+
+    <footer>
+        <div th:replace="Complementos/footer :: footer"></div>
+    </footer>
+
+    <script src="assets/js/modCita.js"></script>
+
+</body>
+
