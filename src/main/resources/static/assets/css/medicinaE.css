@@ -1,0 +1,200 @@
+h2 , h3 , p, span{
+    font-family: "Roboto", sans-serif;
+}
+h3{
+    color: var(--sky-blue);
+}
+
+/*Button*/
+
+button{
+    padding: 6px 20px;
+    margin: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    & a{
+        color: var(--black);
+        font-weight: 600;
+        font-size: 17px;
+        text-decoration: none;
+    }
+}
+
+button:hover{
+    background-color: var(--sky-blue);
+    border: 1px solid var(--sky-blue);
+    & a{
+        color: var(--white);
+    }
+}
+
+/*Container Doctors*/
+
+.container_doctors{
+    width: 100%;
+    display: flex;
+}
+
+.doctors_title{
+    width: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--sky-blue);
+}
+
+.title_info{
+    width: 80%;
+    & h2{
+        color: var(--white);
+        margin-bottom: 25px;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    & p{
+        color: var(--white);
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+
+.doctors_info{
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--white);
+}
+
+.info_img{
+    margin-left: 50px;
+}
+
+.info_text{
+    margin-left: 50px;
+    & h3{
+        padding-bottom: 30px;   
+        font-size: 30px;
+        font-weight: bolder;  
+    }
+    & p{
+        font-size: 20px;
+        display: flex;
+        margin-bottom: 6px;
+        & img{
+            margin-right: 10px;
+            width: 22px;
+        }
+    }
+}
+
+/*Profesional style*/
+
+.profesionalE{
+    width: 75%;
+    margin: auto;
+    & h2{
+        padding-top: 40px;
+    }
+}
+
+.table{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 40px auto;
+}
+
+.left_img{
+    display: flex;
+}
+
+.table_left{
+    display: flex;
+    background-color: var(--white);
+    padding: 25px 0 25px 60px;
+    & p{
+        align-content: center;
+        padding-left: 35px;
+        font-size: 16px;
+    }  
+}
+
+.table_right{
+    background-color: #f0ebeb;
+    display: flex;
+    padding: 25px 0 25px 60px;
+    & p{
+        font-size: 16px;
+        align-content: center;
+    }
+}
+
+span{
+    font-weight: 600;
+}
+
+.color1{
+    background-color: #f0ebeb;
+}
+
+.color2{
+    background-color: var(--white);
+}
+
+/*Responsive Design*/
+
+@media (max-width: 1205px){
+    .container_doctors{
+        flex-direction: column;
+    }
+
+    .profesionalE{
+        & h2{
+            text-align: center;
+        }
+    }
+
+    .doctors_title{
+        width: 100%;
+        padding: 70px 0;
+        & h2{
+            text-align: center;
+        }
+        & p{
+            text-align: center;
+        } 
+    }
+
+    .doctors_info{
+        flex-direction: column;
+        & img{
+            margin-bottom: 60px;
+        }
+    }
+
+    .table{
+        grid-template-columns: repeat(1, 8fr);
+    }
+
+    .table_right{
+        padding-left: 0;
+        & p{
+            text-align: center;
+            margin: auto;
+        }
+    }
+
+    .table_left{
+        padding-left: 0;
+    }
+
+    .left_img{
+        margin: auto;
+    }
+
+    .color1{
+        background-color: var(--white);
+    }
+    .color2{
+        background-color: #f0ebeb;
+    }
+}

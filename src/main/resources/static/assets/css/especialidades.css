@@ -1,0 +1,48 @@
+h2 , h3 , p, span{
+    font-family: "Roboto", sans-serif;
+}
+
+h3 {
+    color: var(--sky-blue);
+}
+
+/*Especialidades*/
+
+.containerEspecialidades{
+    width: 80%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 30px;
+}
+
+.types_especialidades{
+    & img{
+        width: 75px;
+        display: block;
+        margin: 30px auto;
+    }
+    & a{
+        text-decoration: none;
+    }
+    & p{
+        color: var(--black);
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+}
+
+/*Responsive Design*/
+
+@media (max-width: 800px){
+    .containerEspecialidades{
+        grid-template-columns: repeat(2, 4fr);
+    }
+}
+
+@media (max-width: 500px){
+    .containerEspecialidades{
+        grid-template-columns: repeat(1, 6fr);
+    }
+}

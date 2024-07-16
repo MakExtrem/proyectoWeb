@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <div th:replace="Complementos/head :: head"></div>
+    <title>Añadir Especialidad</title>
+</head>
+<body>
+
+<header>
+    <div th:replace="Complementos/headerAdmin :: header"></div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="text-center">
+                <h1 class="display-5 mb-5"><strong>Añadir</strong></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col">
+        <form action="" class="row justify-content-center mb-4" id="formulario">
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Nombre Especialidad:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="nombreEspe" >
+                    <input type="text"  class="form-control" value="" >
+                </div>
+            </div>
+
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-5 d-flex justify-content-center">
+                    <input class="btn btn-success add-btn" type="submit" value="Guardar" id="guardar">
+                </div>
+            </div>
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-5">
+                    <p id="respuesta"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<footer>
+    <div th:replace="Complementos/footer :: footer"></div>
+</footer>
+
+<script src="assets/js/añadirEspe.js"></script>
+
+</body>
+

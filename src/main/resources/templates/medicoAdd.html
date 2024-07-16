@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <div th:replace="Complementos/head :: head"></div>
+    <title>Añadir Medico</title>
+</head>
+<body>
+
+<header>
+    <div th:replace="Complementos/headerAdmin :: header"></div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="text-center">
+                <h1 class="display-5 mb-5"><strong>Añadir</strong></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col">
+        <form action="" class="row justify-content-center mb-4" id="formulario">
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Nombre:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="Nombre">
+                    <input type="text"  class="form-control" value="" >
+                </div>
+            </div>
+
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Apellido:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="Apellido">
+                    <input type="text"  class="form-control" value="" >
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">DNI: </label></h5>
+                </div>
+                <div class="col col-lg-3" id="DNI">
+                    <input type="text" pattern="\d{8}" class="form-control" value="" >
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Direccion: </label></h5>
+                </div>
+                <div class="col col-lg-3" id="Direccion">
+                    <input type="text"  class="form-control" value="" >
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Email:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="Email">
+                    <input type="email"  class="form-control" value="" >
+                </div>
+            </div>
+
+
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">N° Colegiatura: </label></h5>
+                </div>
+                <div class="col col-lg-3" id="Colegiatura">
+                    <input type="text" pattern="\d{9}" class="form-control" value="" >
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Genero:</label></h5>
+
+                </div>
+                <div class="col col-lg-3" id="Genero">
+                    <input type="text"  class="form-control" value="" >
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Telefono:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="Telefono">
+                    <input type="text" pattern="\d{9}" class="form-control" value="" >
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Especialidad:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="Especialidad">
+                    <input type="text"  class="form-control" value="" >
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-2">
+                    <h5><label for="">Fecha Nacimiento:</label></h5>
+                </div>
+                <div class="col col-lg-3" id="FechaNacimiento">
+                    <input type="date"  class="form-control" value="" >
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-5 d-flex justify-content-center">
+                    <input class="btn btn-success add-btn" type="submit" value="Guardar" id="guardar">
+                </div>
+            </div>
+            <div class="row justify-content-md-center my-3">
+                <div class="col col-lg-5">
+                    <p id="respuesta"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div th:replace="Complementos/footer :: footer"></div>
+</footer>
+
+<script src="assets/js/añadirMed.js"></script>
+
+</body>
+
