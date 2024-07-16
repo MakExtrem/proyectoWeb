@@ -1,0 +1,14 @@
+.hero{
+    & img{
+        width: 100%;
+        position: absolute;
+        opacity: 0.2;
+    }
+    & h1{
+        color: black;
+        font-size: 50px;
+        text-align: center;
+        padding: 400px;
+        z-index: 100;
+    }
+}
