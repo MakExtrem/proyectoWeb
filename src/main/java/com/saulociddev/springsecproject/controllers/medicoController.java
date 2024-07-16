@@ -1,41 +1,59 @@
 package com.saulociddev.springsecproject.controllers;
 
 import com.saulociddev.springsecproject.entities.medico;
+import com.saulociddev.springsecproject.entities.paciente;
 import com.saulociddev.springsecproject.repositories.medicoRepository;
+import com.saulociddev.springsecproject.services.medicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class medicoController {
     @Autowired
     private medicoRepository MedicoRepository;
 
+    @Autowired
+    private medicoService MedicoService;
+
     @GetMapping(value = "/medico")
     public List<medico> getMedico(){
 
         return MedicoRepository.findAll();
     }
+
+    @GetMapping(value = "/medico/{id}")
+    private Optional<medico> getOneMedico(@PathVariable int id){
+        return MedicoRepository.findById(id);
+    }
+
+
     @PostMapping(value = "/medico/save")
     public String saveMedico(@RequestBody medico Medico){
+        Medico.setActivo(1);
+        Medico.setFechaRegistro(Medico.setFechaSistema());
     MedicoRepository.save(Medico);
         return "Medico Guardado";
 
     }
 
+    @GetMapping(value = "/medico/espe/{idEs}")
+    public List<medico> getMedicoEspecialidad(@PathVariable int idEs){
+        return MedicoService.getMedicoEspecialidad(idEs);
+    }
+
+
+
     @PutMapping(value = "/medico/update/{id}")
     public String updateMedico(@PathVariable int id, @RequestBody medico Medico){
         medico updateMedico = MedicoRepository.findById(id).get();
-        updateMedico.setId_Especialidad(Medico.getId_Especialidad());
         updateMedico.setNombre(Medico.getNombre());
         updateMedico.setApellido(Medico.getApellido());
-        updateMedico.setDni(Medico.getDni());
         updateMedico.setDireccion(Medico.getDireccion());
         updateMedico.setTelefono(Medico.getTelefono());
         updateMedico.setEmail(Medico.getEmail());
-        updateMedico.setNumeroColegiatura(Medico.getNumeroColegiatura());
-        updateMedico.setFechaNacimiento(Medico.getFechaNacimiento());
         MedicoRepository.save(updateMedico);
         return "Medico actualizado";
     }

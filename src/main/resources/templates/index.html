@@ -8,36 +8,6 @@
 
 <body>
 
-<!--
-
-    <p class="error" th:if="${error!=null}" th:text="${error}"></p>
-    <p class="exito" th:if="${exito!=null}" th:text="${exito}"></p>
-
-    <h1>Si No eres usuario</h1>
-
-    <div class="contenedor">
-        <form th:action="@{/registrar}" method="post">
-            <h1>Crea una cuenta</h1>
-            <input type="text" name="username" placeholder="Nombre de usuario" required /><br/>
-            <input type="email" name="email" placeholder="Email" required /><br/>
-            <input type="password" name="password" placeholder="Contraseña" required /><br/>
-            <input type="password" name="password2" placeholder="Repetir cotraseña" required /><br/>
-            <button type="submit">Registrar</button>
-        </form>
-    </div>
-    
-    <h1>Si eres usuario</h1>
-    
-    <div class="contenedor">
-        <form th:action="@{/login}" method="post">
-            <h1>Inicia sesión</h1>
-            <input type="email" name="email" placeholder="Email" required /><br/>
-            <input type="password" name="password" placeholder="Contraseña" required /><br/>
-            <button type="submit">Ingresar</button>
-        </form>
-    </div>
-
--->
 
 
     <p class="error" th:if="${error!=null}" th:text="${error}"></p>
@@ -72,8 +42,11 @@
                                 <input type="submit" class="submit"  name="btm-login" value="Logeate">
                             </div>
                             <div class="signin">
-                                <span>¿No tienes una cuenta? <a th:href="@{/registraruser}">Registrate</a></span>
+                                <span>¿No tienes una cuenta? <a th:href="@{/registraruser}">Registrate</a>
+                                    <br>
+                                <span><a th:href="@{/}">Atras</a></span>
                             </div>
+
 
                         </form>
 

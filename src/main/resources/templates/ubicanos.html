@@ -4,144 +4,66 @@
     <div th:replace="Complementos/head :: head"></div>
     <title>Ubicanos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        .h {
-     background-color: #f5f5f5; /* Un color de fondo ligero */
-    color: #2c3e50; /* Un tono de azul oscuro */
-    text-align: center;
-    padding: 20px 0; /* Espacio interno arriba y abajo */
-    width: 100%; /* Asegura que ocupe toda la anchura */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo */
-    border-bottom: 2px solid #bdc3c7; /* Línea subrayada */
-}
-.l { border-radius: 15px;}
-
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff; /* Cambiado a blanco */
-        }
-        h1, h2 {
-            color: #1e88e5; /* Color celeste oscuro */
-        }
-        .contact-number, .contact-email {
-            font-size: 1.2em;
-            color: #ecf0f3; /* Color celeste oscuro */
-            margin-top: 10px;
-        }
-        .address-text {
-            font-size: 1.2em;
-            color: #ffffff; /* Color blanco */
-            margin-top: 10px;
-        }
-        .contact-box {
-            display: inline-block;
-            background-color: rgba(121, 126, 128, 0.7);
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            transition: transform 0.2s; /* Agregar transición */
-        }
-        .contact-box:hover {
-            transform: scale(1.1); /* Crece un 10% al pasar el cursor por encima */
-        }
-        .address-overlay {
-            display: none;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, 20px);
-            background-color: rgba(8, 184, 243, 0.7);
-            color: #f7f1f1;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .image-row {
-            display: flex;
-            align-items: center;
-            width: 50%; /* Ajustar el ancho */
-            margin: 0 auto; /* Centrar horizontalmente */
-            padding: 25px; /* Espacio a los lados */
-            box-sizing: border-box;
-            background-color: #cae9ed; /* Color gris (plomo) */
-            border-radius: 15px;
-        }
-        .large-image {
-            width: 100%; /* Ocupar todo el espacio disponible */
-            height: auto; /* Mantener la proporción */
-            max-width: 100%; /* Ajustar al ancho del contenedor */
-            transition: transform 0.2s; /* Agregar transición */
-            border-radius: 15px;
-        }
-        .large-image:hover {
-            transform: scale(1.1); /* Crece un 10% al pasar el cursor por encima */
-        }
-        .small-image {
-            width: 40px; /* Tamaño más pequeño para las imágenes de llamada y correo */
-            height: auto;
-        }
-    </style>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+    />
 </head>
 <body>
     <header>
         <div th:replace="Complementos/header :: header"></div>
     </header>
-    <h2></h2>
-    <h1 class="h"> Estamos ubicados</h1>
-    <br>
-    <br>
-    <div class="image-row">
-        <div style="position: relative; flex: 1;">
-            <div class="map-container">
-                <iframe class="l"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3129.1654262050142!2d-77.02144285308364!3d-12.090707459934448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1717122476133!5m2!1ses-419!2spe"
-                        width=100%
-                        height="600"
-                        frameborder="0"
-                        style="border:0;"
-                        allowfullscreen=""
-                        aria-hidden="false"
-                        tabindex="0">
-                </iframe>
+
+
+    <section class="ubication">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.558100824567!2d-77.06139678926804!3d-12.073896188115674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c91d1967f115%3A0xfe57353c0fbd27d7!2sInstituto%20M%C3%A9dico%20Vida%20Plena!5e0!3m2!1ses-419!2spe!4v1720585402269!5m2!1ses-419!2spe"
+                width="60%"
+                height="690"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="ubication_text">
+            <h2>Sede Principal</h2>
+            <div class="ubication_info">
+                <p>
+                    <i class="bi bi-geo-alt"></i>
+                    Av. Lima Mz. A Lote 8 Lurín Municipalidad Metropolitana de Lima
+                </p>
+                <p>
+                    <i class="bi bi-telephone"></i>
+                    (511) 224·2224 / (511) 224·2226
+                </p>
             </div>
+            <img src="assets/img/clinica.jpg" alt="" />
+
+            <div class="ubication_time">
+                <h3>Horario de atención:</h3>
+                <h4>Consultas:</h4>
+                <p>
+                    Lunes a viernes: 08:00 a 20:00 <br />
+                    Sábado: 08:00 a 14:00
+                </p>
+                <h4>Visitas:</h4>
+                <p>Lunes a domingo: 09:00 a 23:00</p>
+                <h4>Emergencias:</h4>
+                <p>24 horas, 7 días a la semana</p>
+                <br>
+            </div>
+
         </div>
-    </div>
-    <br>
-    <br>
-        <div class="image-row">
-        <div style="position: flex; flex: 1;">
-            <img src="assets/img/clinica.png" alt="Imagen de la clínica" class="large-image">
-        </div>
-    </div>
-    <br><br>
-    <h1 class="h"> ¿Alguna pregunta? Siéntete libre de contactarnos</h1>
-    <div class="contact-box">
-        <img src="assets/img/llamada.png" alt="Icono de llamada" class="small-image">
-        <div class="contact-number">+51 984 478 298</div>
-        <div class="contact-number">+51 924 212 726</div>
-        <div class="contact-number">+51 978 878 781</div>
-        <div class="contact-number">+51 933 693 095</div>
-    </div>
 
-    <div class="contact-box">
-        <img src="assets/img/correo.png" alt="Icono de correo" class="small-image">
-        <div class="contact-email">u21214981@utp.edu.pe</div>
-        <div class="contact-email">u20214913@utp.edu.pe</div>
-        <div class="contact-email">u22215171@utp.edu.pe</div>
-        <div class="contact-email">u21243891@utp.edu.pe</div>
-    </div>
+    </section>
 
-    <script>
-        const locationImage = document.getElementById('location-image');
-        const addressOverlay = document.getElementById('address-overlay');
 
-        locationImage.addEventListener('click', function() {
-            addressOverlay.style.display = addressOverlay.style.display === 'none' ? 'block' : 'none';
-        });
-    </script>
+
     <footer>
         <div th:replace="Complementos/footer :: footer"></div>
     </footer>

@@ -7,6 +7,7 @@
 </head>
 <body>
 
+
 <p class="error" th:if="${error!=null}" th:text="${error}"></p>
 <p class="exito" th:if="${exito!=null}" th:text="${exito}"></p>
 
@@ -23,9 +24,7 @@
                 <div class="input-box">
 
                     <form th:action="@{/registrar}" method="post">
-                        <header>
-                            <img class="logo" src="assets/img/logo.jpg" alt="">
-                        </header>
+
                         <!--<h3>Crea una cuenta</h3>-->
                         <div class="input-field">
                             <input type="text" name="username" placeholder="Nombre de usuario" required />
@@ -40,20 +39,41 @@
 
                         </div>
                         <div class="input-field">
-                            <input type="password" name="password2" placeholder="Repetir cotraseña" required /><br>
-
+                            <input type="password" name="password2" placeholder="Repetir cotraseña" required />
                         </div>
                         <div class="input-field">
-                            <input type="submit" class="submit"  name="btm-login" value="Registrarse">
+                            <input type="text" name="nombre" placeholder="Nombre" required />
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="apellido" placeholder="Apellido" required />
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="dni" pattern="\d{8}"  placeholder="DNI" required />
+                        </div>
+                        <div class="input-field">
+                            <input type="date" name="fechaNacimiento"  required />
+                        </div>
+                        <div class="input-field">
+                        <select name="genero" required><br>
+                            <option value="">Seleccione una opción</option>
+                            <option value="male">Hombre</option>
+                            <option value="female">Mujer</option>
+                            <option value="ND">Prefiero no decirlo</option>
+                        </select>
+                        </div>
 
+                        <div class="input-field">
+                            <input type="text" name="telefono" pattern="\d{9}"  placeholder="Telefono" required />
+                        </div>
+
+                        <div class="input-field">
+                            <input type="submit" class="submit"  name="btm-login" value="Registrarse">
                         </div>
                         <div class="signin">
                             <span>¿Ya tienes una cuenta? <a th:href="@{/}">Logeate</a></span>
+                            <br>
+                            <span><a th:href="@{/}">Atras</a></span>
                         </div>
-
-
-
-
                     </form>
 
                 </div>

@@ -15,4 +15,8 @@ public class CitaService {
     public List<Object[]> getRecommendedDoctors(String idPaciente, String idEspecialidad) {
         return CitaRepository.recomdoctor(idPaciente,idEspecialidad);
     }
+    public List<Object[]> getlistmed( int idEspecialidad) {
+        return CitaRepository.obtenerlista(idEspecialidad);
+    }
+
 }

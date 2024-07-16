@@ -17,6 +17,10 @@ public interface citaRepository extends JpaRepository<cita,Integer> {
     List<Object[]> recomdoctor(@Param("idPaciente") String idPaciente,@Param("idEspecialidad") String idEspecialidad);
 
 
+    @Query(value = "SELECT m.nombre, m.apellido FROM\n" +
+            "medico m JOIN especialidad e ON e.id = m.id_especialidad \n" +
+            " WHERE e.id = :idEspecialidad", nativeQuery = true)
+    List<Object[]> obtenerlista(@Param("idEspecialidad") int idEspecialidad);
 
 
 }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.saulociddev.springsecproject.entities.paciente;
+import com.saulociddev.springsecproject.repositories.pacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -28,6 +30,8 @@ public class UsuarioService implements UserDetailsService {
 
     @Autowired
     private UsuarioRepository userRepo;
+    @Autowired
+    private pacienteRepository PacienteRepository;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
@@ -46,7 +50,8 @@ public class UsuarioService implements UserDetailsService {
     }
 
     @Transactional
-    public void nuevoUsuario(String username, String email, String password, String password2) throws MyException {
+    public void nuevoUsuario(String username, String email, String password, String password2, String nombre,String apellido,
+                             int dni, String fechaNacimiento,String genero,int telefono) throws MyException {
         validarUsuario(username, email, password, password2);
         Usuario usuario = new Usuario();
         usuario.setUsername(username);
@@ -54,6 +59,19 @@ public class UsuarioService implements UserDetailsService {
         usuario.setPassword(new BCryptPasswordEncoder().encode(password));
         usuario.setRol(Rol.USER);
         userRepo.save(usuario);
+        paciente Paciente =new paciente();
+        Paciente.setActivo(1);
+        Paciente.setApellido(apellido);
+        Paciente.setNombre(nombre);
+        Paciente.setEmail(email);
+        Paciente.setDni(dni);
+        Paciente.setFechaNacimiento(fechaNacimiento);
+        Paciente.setFechaRegistro(Paciente.setFechaSistema());
+        Paciente.setGenero(genero);
+        Paciente.setTelefono(telefono);
+        Paciente.setIduser(usuario.getId());
+        PacienteRepository.save(Paciente);
+
     }
 
     public List<Usuario> buscarUsuarios() {

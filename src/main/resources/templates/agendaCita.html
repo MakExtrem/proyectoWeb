@@ -9,6 +9,8 @@
         <div th:replace="Complementos/header :: header"></div>
     </header>
 
+
+<!--
     <div class="container">
         <div class="row">
             <div class="col">
@@ -76,7 +78,49 @@
 
         </form>
 
-    </div>
+    </div>-->
+
+
+
+    <section class="appointment">
+        <div class="appointment_img">
+            <img src="assets/img/register.png" alt="" />
+        </div>
+        <div class="appointment_register">
+            <h2>Registro de citas</h2>
+            <form action="" class="row justify-content-center mb-4" id="formulario">
+                <div class="register_text">
+
+                    <label for="">Especialidad</label>
+                    <select name="especialidadMedico" class="" id="option_especialidades" required>
+                    </select>
+                    <br>
+                    <h6><b><p id="Rec_medico"></p></b></h6>
+
+                    <label for="">Médico</label>
+                    <select name="id_Medico" class="" id="option_medico" required>
+                    </select>
+                    <br>
+                    <label for="">Fecha</label>
+                    <input class="form-control" type="date"  id="fechaAtencion" name="fechaAtencion" required/>
+                    <br>
+                    <label for="">Horario</label>
+                    <input class="form-control" type="time"  id="horaAtencion" name="horaAtencion" required/>
+                    <br>
+                    <label for="">Observación</label>
+                    <textarea class="form-control"  placeholder="¿Deseas dejar una nota?" id="observaciones" name="observaciones" rows="6" cols="8" ></textarea>
+                    <br>
+                    <input class="button" type="submit" value="AGENDAR CITA" id="enviar"/>
+                    <br>
+                    <b><p id="respuesta"></p></b>
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+
+
 
 
     <footer>
@@ -85,4 +129,4 @@
     <script src="assets/js/agendarenviar.js"></script>
     <script src="assets/js/agendarlistar.js"></script>
 </body>
-
+</html>

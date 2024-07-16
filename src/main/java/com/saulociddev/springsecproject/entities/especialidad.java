@@ -2,6 +2,10 @@ package com.saulociddev.springsecproject.entities;
 
 import jakarta.persistence.*;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Entity
 @Table(schema = "Especialidad")
 public class especialidad {
@@ -45,5 +49,12 @@ public class especialidad {
 
     public void setActivo(int activo) {
         this.activo = activo;
+    }
+    public String setFechaSistema(){
+        DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        Date date = new Date();
+        return dateFormat.format(date);
+        /*horaAtencion=dateFormat.format(date);*/
+
     }
 }

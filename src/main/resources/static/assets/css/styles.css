@@ -3,6 +3,8 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+
 .wrapper{
     background: #ececec;
     padding: 0 20px 0 20px;
@@ -37,7 +39,7 @@
 }
 .text p{
     color: #fff;
-    font-size: 20px; 
+    font-size: 20px;
 }
 i{
     font-weight: 400;
@@ -75,7 +77,9 @@ img{
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 0 10px 0 10px;
+    padding: 0 15px 0 15px;
+    margin-top: 10px;
+
 }
 .input{
     height: 45px;
@@ -93,16 +97,17 @@ img{
     left: 10px;
     pointer-events: none;
     transition: .5s;
+
 }
 .input-field input:focus ~ label
    {
     top: -10px;
-    font-size: 13px;
+    font-size: 10px;
   }
   .input-field input:valid ~ label
   {
    top: -10px;
-   font-size: 13px;
+   font-size: 10px;
    color: #5d5076;
  }
  .input-field .input:focus, .input-field .input:valid{
@@ -115,6 +120,7 @@ img{
     background: #ececec;
     border-radius: 5px;
     transition: .4s;
+    margin-top: 15px;
  }
  .submit:hover{
     background: rgba(37, 95, 156, 0.937);
@@ -152,7 +158,7 @@ span a:hover{
         text-align: center;
     }
     .text p, i{
-        font-size: 16px;
+        font-size: 13px;
     }
     .row{
         max-width:420px;

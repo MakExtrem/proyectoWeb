@@ -2,87 +2,130 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <head>
         <div th:replace="Complementos/head :: head"></div>
-        <title>VidaSalud</title>
+        <title>Vida Salud</title>
     </head>
     <body>
         <header>
             <div th:replace="Complementos/header :: header"></div>
         </header>
 
-    <div class="background-image">
-            <div class="background-content">
-                <h2>Tu Clinica de confianza</h2>
-                <p>Máxima precisión en tus análisis, sean de rutina o de alta complejidad, gracias a nuestros profesionales y nuestros equipos de última generación con reconocimiento a nivel mundial.</p>
-            </div>
-        </div>
 
-        <div class="about">
-            <div class="main-about">
-                <div class="inner-about">
-                    <div class="about-content">
-                        <h2>Profesionales Altamente Capacitados</h2>
-                    <p>Somos un grupo de profesionales altamente capacitados y experimentados. Contamos con más de 20 años de trayectoria profesional en el sector.</p>
-                    </div>
-
-                </div>
-                <div class="inner-about">
-                    <div class="inner-about-image">
-                        <img src="assets/img/chiness.jpg" alt="">
-                    </div>
-                    <div class="inner-about-image">
-                        <img src="assets/img/pexels-anthony-shkraba-6749770.jpg" alt="">
-                    </div>
+        <section class="hero">
+            <div class="hero_text">
+                <div class="asd">
+                    <h1>Vida Salud</h1>
+                    <p>
+                        Ofrecemos la máxima precisión en tus análisis sean de rutina o de alta
+                        complejidad, gracias a nuestros profesionales y nuestros equipos de
+                        última generación con reconocimiento a nivel mundial.
+                    </p>
                 </div>
             </div>
-        </div>
-            <div class="main-services">
-                <div class="inner-services-content">
-                    <h2>Años de trayectoria</h2>
-                    <p>Somos un grupo de profesionales altamente capacitados y experimentados. Contamos con más de 20 años de trayectoria profesional en el sector.</p>
+            <img src="assets/img/hero.jpg" alt="" />
+        </section>
+        <section id="about" class="about_us">
+            <h2>Sobre nosotros</h2>
+            <div class="about">
+                <div class="about_img">
+                    <img src="assets/img/about-us.jpg" alt="" />
                 </div>
-
-                <div class="inner-services-content">
-                    <h2>Tecnología de punta </h2>
-                    <p>Gracias a la calidad de nuestros equipos de última generación, puede confiar en la precisión de sus resultados. Nos interesa su tranquilidad y su salud.</p>
-
-                </div>
-
-                <div class="inner-services-content">
-                    <h2>Siempre a la vanguardia</h2>
-                    <p>Estamos constantemente innovando para brindar el mejor servicio. Es fundamental en nuestra organización el confort y la eficiencia en la atención de pacientes y clientes.</p>
+                <div class="about_list">
+                    <div class="about_description">
+                        <div class="about_number">
+                            <p>01</p>
+                        </div>
+                        <div class="about_info">
+                            <h3>Misión</h3>
+                            <p>
+                                Brindar servicios de salud confiables y seguros a nuestra
+                                comunidad orientándonos permanentemente hacia la excelencia
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about_description">
+                        <div class="about_number">
+                            <p>02</p>
+                        </div>
+                        <div class="about_info">
+                            <h3>Visión</h3>
+                            <p>
+                                Ser reconocidos en el ámbito de salud por nuestro prestigio,
+                                trayectoria y vocación de servicio, orientados a nuestros
+                                pacientes, clientes y colaboradores
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-
+        </section>
+        <section class="services">
+            <h2>Profesionales Altamente Capacitados</h2>
+            <p>
+                Somos un grupo de profesionales altamente capacitados y experimentados.
+                Contamos con más de 20 años de trayectoria profesional en el sector.
+            </p>
+            <div class="services_list">
+                <div class="services_item">
+                    <img src="assets/img/services_1.svg" alt="" />
+                    <h3>Años de trayectoria</h3>
+                    <p>
+                        Somos un grupo de profesionales altamente capacitados y
+                        experimentados. Contamos con más de 20 años de trayectoria
+                        profesional en el sector.
+                    </p>
+                </div>
+                <div class="services_item">
+                    <img src="assets/img/services_2.svg" alt="" />
+                    <h3>Tecnología de punta</h3>
+                    <p>
+                        Gracias a la calidad de nuestros equipos de última generación, puede
+                        confiar en la precisión de sus resultados. Nos interesa su
+                        tranquilidad y su salud.
+                    </p>
+                </div>
+                <div class="services_item">
+                    <img src="assets/img/services_3.svg" alt="" />
+                    <h3>Siempre a la vanguardia</h3>
+                    <p>
+                        Estamos constantemente innovando para brindar el mejor servicio. Es
+                        fundamental en nuestra organización el confort y la eficiencia en la
+                        atención de pacientes y clientes.
+                    </p>
+                </div>
+            </div>
+        </section>
         <div class="gallery">
             <h2>Galería</h2>
             <div class="main-gallery">
                 <div class="inner-gallery">
-                    <img src="assets/img/gal1.jpg" alt="">
+                    <img src="assets/img/gal1.jpg" alt="" />
                 </div>
 
                 <div class="inner-gallery">
-                    <img src="assets/img/gal2.jpg" alt="">
+                    <img src="assets/img/gal2.jpg" alt="" />
                 </div>
 
                 <div class="inner-gallery">
-                    <img src="assets/img/gal3.jpg" alt="">
+                    <img src="assets/img/gal3.jpg" alt="" />
                 </div>
 
                 <div class="inner-gallery">
-                    <img src="assets/img/gal4.jpg" alt="">
+                    <img src="assets/img/gal4.jpg" alt="" />
                 </div>
 
                 <div class="inner-gallery">
-                    <img src="assets/img/gal5.jpg" alt="">
+                    <img src="assets/img/gal5.jpg" alt="" />
                 </div>
 
                 <div class="inner-gallery">
-                    <img src="assets/img/gal6.jpg" alt="">
+                    <img src="assets/img/gal6.jpg" alt="" />
                 </div>
             </div>
         </div>
+
+
+
+
 
         <footer>
             <div th:replace="Complementos/footer :: footer"></div>

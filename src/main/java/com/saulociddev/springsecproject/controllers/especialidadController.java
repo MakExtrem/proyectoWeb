@@ -20,6 +20,8 @@ public class especialidadController {
 
     @PostMapping(value = "/especialidad/save")
     public String saveEspecialidad(@RequestBody especialidad Especialidad){
+        Especialidad.setFechaRegistro(Especialidad.setFechaSistema());
+        Especialidad.setActivo(1);
         EspecialidadRepository.save(Especialidad);
         return "Especialidad Creada";
     }
@@ -31,7 +33,7 @@ public class especialidadController {
         return "Se actualizo la especialidad";
     }
 
-    @PatchMapping(value = "/especialidad/disable{id}")
+    @PatchMapping(value = "/especialidad/disable/{id}")
     public String disableEspecialidad(@PathVariable int id){
         especialidad disableEspecialidad = EspecialidadRepository.findById(id).get();
         disableEspecialidad.setActivo(0);
@@ -40,7 +42,7 @@ public class especialidadController {
         return "Se desactivo la Especilidad";
     }
 
-    @PatchMapping(value = "/especialidad/view{id}")
+    @PatchMapping(value = "/especialidad/view/{id}")
     public String viewEspecialidad(@PathVariable int id) {
         especialidad viewEspecialidad = EspecialidadRepository.findById(id).get();
         viewEspecialidad.setActivo(1);

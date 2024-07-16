@@ -14,7 +14,7 @@ const listCita = async () => {
                 <td class='centered'>${cita.especialidadMedico}</td>
                 <td class='centered'>${cita.fechaAtencion}</td>
                 <td class='centered'>${cita.horaAtencion}</td>
-                <td class='centered'><button onclick="enviarDatoModificar(${cita.id})" class="btn btn-info">Editar</button><button onclick="cambiarestado(${cita.id})" class="btn btn-danger">Eliminar</button> </td>
+                <td class='centered'><button onclick="enviarDatoModificar(${cita.id})" class="btn btn-info">Editar</button> <button onclick="cambiarestado(${cita.id})" class="btn btn-danger">Eliminar</button> </td>
                 </tr>`;
         }
 

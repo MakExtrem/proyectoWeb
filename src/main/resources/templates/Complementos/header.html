@@ -2,28 +2,33 @@
     <nav class="nav container">
         <img src="assets/img/LogoS.png" alt="" style="width: 80px;">
         <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a th:href="@{/inicio}" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a th:href="@{/agenda}" class="nav__link">Agenda tu Cita</a>
-                </li>
-                <li class="nav__item">
-                    <a th:href="@{/especialidades}" class="nav__link">Especialidades</a>
-                </li>
-                <li class="nav__item">
-                    <a th:href="@{/plansalud}" class="nav__link">Plan Salud</a>
-                </li>
-                <li class="nav__item">
-                    <a th:href="@{/ubicanos}" class="nav__link">Ubicanos</a>
-                </li>
-                <li class="nav__item">
-                    <a th:href="@{/}" class="nav__link">Logout</a>
-                </li>
+            <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+            <nav class="nav" id="nav">
+                <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a th:href="@{/}" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a th:href="@{/agenda}" class="nav__link">Agenda tu Cita</a>
+                    </li>
+                    <li class="nav__item">
+                        <a th:href="@{/especialidades}" class="nav__link">Especialidades</a>
+                    </li>
+                    <li class="nav__item">
+                        <a th:href="@{/plansalud}" class="nav__link">Plan Salud</a>
+                    </li>
+                    <li class="nav__item">
+                        <a th:href="@{/ubicanos}" class="nav__link">Ubicanos</a>
+                    </li>
+                    <li th:unless="${isLoggedIn}"  class="nav__item">
+                        <a  th:href="@{/index}" class="nav__link">Login</a>
+                    </li>
+                    <li th:if="${isLoggedIn}"  class="nav__item">
+                        <a  th:href="@{/cerrar}" class="nav__link">Logout</a>
+                    </li>
 
-            </ul>
+                </ul>
         </div>
     </nav>
 </header>
-

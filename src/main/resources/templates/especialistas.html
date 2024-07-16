@@ -2,14 +2,14 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <div th:replace="Complementos/head :: head"></div>
-    <title>Especialidades</title>
+    <title>Añadir</title>
 </head>
 <body>
     <header>
     <div th:replace="Complementos/headerAdmin :: header"></div>
     </header>
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="text-center">
@@ -18,30 +18,25 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-               <form action="" class="row justify-content-center mb-4" autocomplete="">
-                  <div class="col-10 col-md-8 mb-3">
-                     <label for="">ESPECIALIDAD</label>
-                     <input class="form-control" type="text" placeholder="ID MÉDICO">
-                  </div>
-                  <div class="col-10 col-md-8 mb-3">
-                     <label for="">ACTIVO</label>
-                     <input class="form-control" type="text" placeholder="ID PACIENTE">
-                  </div>
-                  <div class="col-10 col-md-8">
-                     <input class="btn btn-success add-btn" type="submit" value="ENVIAR">
-                  </div>
-               </form>
-            </div>
             <div class="container">
-            <div class="col-12">
+                <div class ="row justify-content-md-center">
+                    <div class="col-6">
+                        <button onclick="añadirEsp()" class="btn btn-light"><b>Añadir nueva Especialidad</b></button>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="container">
+                <div class ="row justify-content-md-center">
+            <div class="col-6">
                <table class="table table-striped table-white">
                   <thead>
                      <tr>
-                        <th>ID</th>
+                        <th>CODIGO</th>
                         <th>ESPECIALIDAD</th>
                          <th>FECHA REGISTRO</th>
-                        <th>ACTIVO</th>
                         <th>ACCIONES</th>
                      </tr>
                   </thead>
@@ -50,6 +45,7 @@
                   </tbody>
                </table>
             </div>
+                </div>
         </div>
         </div>
     <footer>

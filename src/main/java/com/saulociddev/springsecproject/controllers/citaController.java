@@ -2,8 +2,10 @@ package com.saulociddev.springsecproject.controllers;
 
 import com.saulociddev.springsecproject.entities.Usuario;
 import com.saulociddev.springsecproject.entities.cita;
+import com.saulociddev.springsecproject.entities.paciente;
 import com.saulociddev.springsecproject.repositories.citaRepository;
 import com.saulociddev.springsecproject.repositories.medicoRepository;
+import com.saulociddev.springsecproject.repositories.pacienteRepository;
 import com.saulociddev.springsecproject.services.CitaService;
 import com.saulociddev.springsecproject.services.medicoService;
 import jakarta.servlet.http.HttpSession;
@@ -25,7 +27,8 @@ public class citaController  {
     private medicoService MedicoService;
     @Autowired
     private CitaService citaService;
-
+    @Autowired
+    private pacienteRepository PacienteRepository;
 
     @GetMapping(value = "/cita")
     private List<cita> getCita(){
@@ -42,27 +45,38 @@ public class citaController  {
     public List<Object[]> getRecommendedDoctors(@PathVariable int idEs,HttpSession sesion,ModelMap modelo) {
         Usuario logeado = (Usuario) sesion.getAttribute("logeado");
         modelo.addAttribute("logeado", logeado);
-        int id = Integer.parseInt(logeado.getId());
+        int id = logeado.getId();
         String id_paciente = String.valueOf(id);
         String id_especialidad = String.valueOf(idEs);
         return citaService.getRecommendedDoctors(id_paciente,id_especialidad);
     }
 
+    @GetMapping("/cita/listarmedico/{idEs}")
+    public List<Object[]> getListMedico(@PathVariable int idEs) {
+        return citaService.getlistmed(idEs);
+    }
+
+
+
     @PostMapping(value = "/cita/save")
     private String saveCita(@RequestBody cita Cita ,HttpSession sesion, ModelMap modelo){
-        //Prueba
-        //Cita.setHoraAtencion(Cita.setHoraAtencionini());
+
         Cita.setFechaRegistro(Cita.setFechaSistema());
         Usuario logeado = (Usuario) sesion.getAttribute("logeado");
         modelo.addAttribute("logeado", logeado);
-        int id = Integer.parseInt(logeado.getId());//aqui cambiar el id para que reciba un string o algo
-        Cita.setNombrePaciente(logeado.getUsername());
+        int id = logeado.getId();
+        Optional<paciente> OpP = PacienteRepository.findById(id);
+        paciente Paciente = OpP.get();
+        String nomPac=Paciente.getNombre();
+        String apePac=Paciente.getApellido();
+        String comPac=nomPac.concat(" ").concat(apePac);
+        Cita.setNombrePaciente(comPac);
         int id_medico=Cita.getId_Medico();
         String nombre = MedicoService.getNombreById(id_medico);
         String apellido= MedicoService.getApellidoById(id_medico);
         String nombreCompleto = nombre.concat(" ").concat(apellido);
         Cita.setNombreMedico(nombreCompleto);
-        Cita.setId_Paciente(id);
+        Cita.setId_Paciente(Paciente.getId());
         Cita.setId_user(id);
         Cita.setEstado(1);
 
@@ -72,7 +86,7 @@ public class citaController  {
     @PutMapping(value = "/cita/update/{id}")
     private String updateCita(@RequestBody cita Cita ,@PathVariable int id){
         cita updateCita = CitaRepository.findById(id).get();
-        /*updateCita.setId_Medico(Cita.getId_Medico());*/
+        /*updateCita.setId_Medico(Cita.getId_Medico());*///cuando se cambie la especialdiad se modificara
         updateCita.setNombreMedico(Cita.getNombreMedico());
         updateCita.setEspecialidadMedico(Cita.getEspecialidadMedico());
         updateCita.setFechaAtencion(Cita.getFechaAtencion());

@@ -23,8 +23,8 @@
                     <a th:href="@{/especialistas}" class="nav__link">Especialidades</a>
                 </li>
 
-                <li class="nav__item">
-                    <a th:href="@{/}" class="nav__link">Logout</a>
+                <li th:if="${isLoggedIn}" class="nav__item">
+                    <a th:href="@{cerrar}" class="nav__link">Logout</a>
                 </li>
             </ul>
         </div>

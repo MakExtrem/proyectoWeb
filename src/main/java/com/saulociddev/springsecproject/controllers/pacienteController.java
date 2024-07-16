@@ -1,11 +1,13 @@
 package com.saulociddev.springsecproject.controllers;
 
+import com.saulociddev.springsecproject.entities.cita;
 import com.saulociddev.springsecproject.entities.paciente;
 import com.saulociddev.springsecproject.repositories.pacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class pacienteController {
@@ -17,6 +19,11 @@ public class pacienteController {
         return PacienteRepository.findAll();
     }
 
+    @GetMapping(value = "/paciente/{id}")
+    private Optional<paciente> getOnePaciente(@PathVariable int id){
+        return PacienteRepository.findById(id);
+    }
+
     @PostMapping(value = "/paciente/save")
     public String savePaciente(@RequestBody paciente Paciente){
         PacienteRepository.save(Paciente);
@@ -26,7 +33,7 @@ public class pacienteController {
     public String updatePaciente(@PathVariable int id,@RequestBody paciente Paciente ){
         paciente updatedPaciente= PacienteRepository.findById(id).get();
         updatedPaciente.setNombre(Paciente.getNombre());
-        updatedPaciente.setApellido(Paciente.getNombre());
+        updatedPaciente.setApellido(Paciente.getApellido());
         updatedPaciente.setDni(Paciente.getDni());
         updatedPaciente.setTelefono(Paciente.getTelefono());
         updatedPaciente.setEmail(Paciente.getEmail());

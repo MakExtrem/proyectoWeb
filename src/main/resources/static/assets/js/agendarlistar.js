@@ -1,4 +1,4 @@
-
+//lista todas las especilidades
 const ListaNombreEspecialidad = async () => {
     try {
         const response = await fetch("http://localhost:8080/especialidad");
@@ -17,8 +17,7 @@ const ListaNombreEspecialidad = async () => {
         console.error('Error en ListaNombreEspecialidad:', error);
     }
 };
-
-
+//ista todos los medicos
 const ListaNombreMedico = async (especialidadId) => {
     try {
         // Obtener datos de los médicos
@@ -34,18 +33,28 @@ const ListaNombreMedico = async (especialidadId) => {
             throw new Error('Error al obtener datos de las citas');
             console.log(responserecom);
         }
-        const citarec = await responserecom.json();
-        const nombreCompleto = citarec[0];
-        if (!nombreCompleto) {
-                Rec_medico.innerHTML=` `;
-                }
-        const [nombred, apellidod] = nombreCompleto;
-        const nombreFormateado = `${nombred} ${apellidod}`;
-        console.log(citarec);
-        console.log(nombreFormateado);
-        if(nombreCompleto){
-        Rec_medico.innerHTML=`Te recomendamos al Doctor(a) ${nombreFormateado}`;
-        }
+            try{
+            //obtener datos de los medicos por especialidad
+                    const listardocesp = await fetch(`http://localhost:8080/cita/listarmedico/${especialidadId}`);
+                    if (!listardocesp.ok) {
+                        throw new Error('Error al obtener datos de los médicos por espcilidad');
+                    }
+
+
+                    const citarec = await responserecom.json();
+                    const nombreCompleto = citarec[0];
+                    if (!nombreCompleto) {
+                    Rec_medico.innerHTML=` `;}
+                    const [nombred, apellidod] = nombreCompleto;
+                    const nombreFormateado = `${nombred} ${apellidod}`;
+                    console.log(citarec);
+                    console.log(nombreFormateado);
+                    if(nombreCompleto){
+                    Rec_medico.innerHTML=`Te recomendamos al Doctor(a) ${nombreFormateado}`;
+                    }
+            }catch(error){
+             console.error(error);
+            }
 
 
         let option = `<option value="" id="">Elige tu Medico</option>`;
@@ -58,11 +67,16 @@ const ListaNombreMedico = async (especialidadId) => {
     } catch (error) {
         console.error('Error en ListaNombreMedico:', error);
     }
+
+
+
+
+
 };
 
     window.addEventListener("load", function () {
     ListaNombreEspecialidad();
-
+    option_medico.innerHTML = `<option value="" id="">Elige tu Medico</option>`;
     option_especialidades.addEventListener("change", function () {
         const selectedOption = this.options[this.selectedIndex];
                 const espec = selectedOption.id; // Obtener el id de la opción seleccionada
@@ -70,7 +84,7 @@ const ListaNombreMedico = async (especialidadId) => {
         /*const espec = this.value;*/
         if (espec) {
             ListaNombreMedico(espec);
-        } else {
+        }else {
             option_medico.innerHTML = `<option value="" id="">Elige tu Medico</option>`;
         }
     });

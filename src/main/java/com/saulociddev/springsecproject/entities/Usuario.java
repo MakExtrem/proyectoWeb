@@ -14,8 +14,8 @@ import lombok.Data;
 public class Usuario {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String username;
     private String email;
     private String password;

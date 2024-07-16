@@ -2,6 +2,10 @@ package com.saulociddev.springsecproject.entities;
 
 import jakarta.persistence.*;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 @Entity
 @Table(schema = "Paciente")
@@ -27,6 +31,17 @@ public class paciente {
     public String genero;
     @Column
     public int activo;
+
+    public int getIduser() {
+        return iduser;
+    }
+
+    public void setIduser(int iduser) {
+        this.iduser = iduser;
+    }
+
+    @Column
+    public int iduser;
 
     //Getter and Setter
     public int getId() {
@@ -107,5 +122,13 @@ public class paciente {
 
     public void setActivo(int activo) {
         this.activo = activo;
+    }
+
+    public String setFechaSistema(){
+        DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        Date date = new Date();
+        return dateFormat.format(date);
+        /*horaAtencion=dateFormat.format(date);*/
+
     }
 }

@@ -40,7 +40,7 @@ guardar.addEventListener('click', (event) => {
 const getData = () => {
   const nombrePaciente = document.querySelector('#nombrePaciente input').value;
       const nombreMedico = document.querySelector('#nombreMedico input').value;
-      const especialidad = document.querySelector('#especialidad input').value;
+      const especialidadMedico = document.querySelector('#especialidad input').value;
       const fechaAtencion = document.querySelector('#fechaAtencion input').value;
       const horaAtencion = document.querySelector('#horaAtencion input').value;
       const observaciones = document.querySelector('#observaciones input').value;
@@ -49,7 +49,7 @@ const getData = () => {
           const datosFormulario = {
               nombrePaciente: nombrePaciente,
               nombreMedico: nombreMedico,
-              especialidad: especialidad,
+              especialidadMedico: especialidadMedico,
               fechaAtencion: fechaAtencion,
               horaAtencion: horaAtencion,
               observaciones: observaciones
@@ -59,7 +59,7 @@ const getData = () => {
 
 
 
-/*Funcion para colocar los datos en el Servidor */
+/*Funcion para colocar los datos en el API */
 
 const postData = async () => {
 

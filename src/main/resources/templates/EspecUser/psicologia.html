@@ -3,86 +3,88 @@
 <head>
     <div th:replace="Complementos/head :: head"></div>
     <title>Psicologia</title>
+
+    <link rel="stylesheet" href="assets/css/medicinaE.css" />
 </head>
 <body>
-<header>
-    <div th:replace="Complementos/header :: header"></div>
-</header>
-        <div class="contenedor_medicina">
-            <div class="contenedor_information">
-                <h1>Psicología</h1>
-                <p>Atención en pacientes para mantener la salud mental, evaluando y tratando problemas emocionales, conductuales y cognitivos.</p>
-            </div>
-            <div class="contenedor_detalles">
-                <div class="contenedor_detalles_img">
-                    <img src="assets/img/docPsicologia.jpg" alt="">
-                </div>
-                <div class="contenedor_detalles_inf">
-                  <h2>Sánchez Torres Luis Fernando</h2>
-                    <p>Colegiatura: 10137</p>
-                  <div class="contenedor_telefono">
-                     <div class="contenedor_detalles_telefono">
-                           <img src="assets/img/telefono.png" alt="">
-                     </div>
-                     <div class="contenedor_detalles_datos">
-                        <p>(511) 244 2224 - (511) 224 2227</p>
-                     </div>
-                  </div>
-                </div>
+    <header>
+        <div th:replace="Complementos/header :: header"></div>
+    </header>
+
+    <!--Button-->
+    <button><a href="especialidades.html">Atrás</a></button>
+    <!-- Doctors -->
+    <section class="container_doctors">
+        <div class="doctors_title">
+            <div class="title_info">
+                <h2>Psicología</h2>
+                <p>
+                    Atención de trastornos de la conducta y procesos mentales de los
+                    individuos y de grupos humanos en distintas situaciones
+                </p>
             </div>
         </div>
-        <div class="contenedor_profesional">
-         <h2 class="contenedor_profesional_h2">
-            Educación Profesional
-         </h2>
-         <div class="contenedor_especialidad">
-            <div class="especialidad_information">
-               <div class="information_img">
-                  <img src="assets/img/icon-1.png" alt="">
-               </div>
-               <div class="information_h2">
-                  <h2>Especialidad: Medicina General</h2>
-               </div>
+        <div class="doctors_info">
+            <div class="info_img">
+                <img src="assets/img/psicologia1.png" alt="" />
             </div>
-            <div class="especialidad_information">
-               <div class="information_h2 da">
-                  <h2 >1ra Especialización: Medicina General</h2>
-               </div>
+            <div class="info_text">
+                <h3>Bravo De Rueda Ortega María Del Carmen</h3>
+                <p>Colegiatura: 01935</p>
+                <p>
+                    <img src="assets/img/telefono.png" alt="" />(511) 244 2224 -
+                    (511) 224 2226
+                </p>
             </div>
-         </div>
+        </div>
+    </section>
+    <!-- Educación profesional-->
+    <section class="profesionalE">
+        <h2>Educación Profesional</h2>
+        <div class="table">
+            <div class="table_left">
+                <div class="left_img">
+                    <img src="assets/img/icon.png" alt="" />
+                    <p><span>Especialidad: </span>Psicología</p>
+                </div>
+            </div>
+            <div class="table_right">
+                <p class="as"><span>Profesión: </span>Psicólogo</p>
+            </div>
+            <div class="table_left color1">
+                <div class="left_img">
+                    <img src="assets/img/icon.png" alt="" />
+                    <p>Universidad Femenina Del Sagrado Corazón</p>
+                </div>
+            </div>
+            <div class="table_right color2">
+                <p class="as">
+                    <span>Maestría: </span>Psicología Clínica Y De Familia
+                </p>
+            </div>
+            <div class="table_left">
+                <div class="left_img">
+                    <img src="assets/img/icon.png" alt="" />
+                    <p>Universidad De San Martín De Porres</p>
+                </div>
+            </div>
+            <div class="table_right">
+                <p class="as"><span>Doctorado: </span>Psicología</p>
+            </div>
+            <div class="table_left color1">
+                <div class="left_img">
+                    <img src="assets/img/icon.png" alt="" />
+                    <p>Universidad Femenina Del Sagrado Corazón</p>
+                </div>
+            </div>
+            <div class="table_right color2">
+                <p class="as">
+                    <span>Maestría: </span>Psicología Clínica Y De La Salud
+                </p>
+            </div>
+        </div>
+    </section>
 
-            <div class="contenedor_especialidad">
-            <div class="especialidad_information">
-               <div class="information_img">
-                  <img src="assets/img/icon-1.png" alt="">
-               </div>
-               <div class="information_h2">
-                  <h2>Universidad Nacional Federico Villarreal</h2>
-               </div>
-            </div>
-            <div class="especialidad_information">
-               <div class="information_h2 de">
-                  <h2>Profesión: Médico General</h2>
-               </div>
-            </div>
-            </div>
-
-            <div class="contenedor_especialidad">
-            <div class="especialidad_information">
-               <div class="information_img">
-                  <img src="assets/img/icon-1.png" alt="">
-               </div>
-               <div class="information_h2">
-                  <h2>Universidad Nacional Mayor De San Marcos</h2>
-               </div>
-            </div>
-            <div class="especialidad_information">
-               <div class="information_h2 di">
-                  <h2>2da Especialización: Medicina Interna</h2>
-               </div>
-            </div>
-         </div>
-      </div>
     <footer>
         <div th:replace="Complementos/footer :: footer"></div>
     </footer>

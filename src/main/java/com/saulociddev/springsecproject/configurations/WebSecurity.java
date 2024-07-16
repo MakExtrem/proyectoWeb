@@ -25,11 +25,12 @@ public class WebSecurity {
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
                 http
                                 .authorizeHttpRequests((authz) -> authz
-                                                .requestMatchers("/admin/*").hasAnyRole("ADMIN", "MODERATOR")
-                                                .anyRequest()
-                                                .permitAll())
+                                        .requestMatchers("/agenda").hasAnyRole("USER").anyRequest()
+                                        .permitAll()
+
+                                )
                                 .formLogin((login) -> login
-                                                .loginPage("/")
+                                                .loginPage("/index")
                                                 .loginProcessingUrl("/login") // PostMapping de logeo
                                                 .usernameParameter("email")
                                                 .passwordParameter("password")
@@ -38,8 +39,10 @@ public class WebSecurity {
                                 .logout((logout) -> logout
                                                 .logoutUrl("/cerrar") // PostMapping de cerrie de sesión
                                                 .logoutSuccessUrl("/")
-                                                .permitAll())
-                                .csrf((csrf) -> csrf.disable());
+                                                .permitAll()
+                                )
+                                .csrf((csrf) -> csrf.disable()
+                                );
                 return http.build();
         }
 

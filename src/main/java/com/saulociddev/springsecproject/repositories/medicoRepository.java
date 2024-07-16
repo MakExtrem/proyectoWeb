@@ -20,4 +20,10 @@ public interface medicoRepository extends JpaRepository<medico,Integer> {
     @Query(value = "select e.nombre from medico m join especialidad e on m.id_especialidad=e.id where m.id= :idMedico", nativeQuery = true)
     String obtenerEspeci(@Param("idMedico") int idPaciente);
 
+    @Query(value="SELECT * FROM medico m WHERE m.id_especialidad = :idEsp", nativeQuery = true)
+    public List<medico> getMedEsp(@Param("idEsp") int idEsp);
+
+    @Query(value="SELECT * FROM medico m WHERE m.id_especialidad = :idEsp", nativeQuery = true)
+    public String getEsp(@Param("idEsp") int idEsp);
+
 }
